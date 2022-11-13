@@ -54,7 +54,7 @@ module.exports = {
   - https://swiperjs.com/
 
 ## フォルダ構造
-
+```
 src
 |_ components (html 分割)
 |  |_layout(header,footerなどページをとうして共通している部分)
@@ -66,6 +66,7 @@ src
 |_ main.ts (ts をまとめるところ)
 |_ index.html (ページに応じて増やす)
 |_ style.scss (共通の css を書くところ)
+```
 
 あとはお好みで
 
