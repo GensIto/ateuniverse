@@ -43,42 +43,52 @@ module.exports = {
 ## プラグイン簡単な説明
 ### scrollreveal
   - スクロールアニメーションのプラグイン簡単です。凝ったものは自分で記述しないとダメです
-  - https://scrollrevealjs.org/
+- [ドキュメント](https://scrollrevealjs.org/)
 ### swiper
   - スライダーのプラグイン
-  - https://swiperjs.com/
+  - [ドキュメント](https://swiperjs.com/)
 ### flowbite
   - 欲しい機能(ハンバーガーメニュー,タブ,モーダル,スライダーもできるがカスタマイズは難しそう)を追加するのに使うのがいいかも
   - 細かいUIの設定は難しいのであくま機能をjs(ts)を書かなくても動かせるように
   - 切り替え時などにアニメーションをつけて欲しいと言われたら、ユーザー目線では速い方がいいと押し切りましょう！！！！(無理だったら、js,tsで書いてください....)
   - tailwind cssのUIライブラリーweb制作では使うことは少なそうですが一応
-  - https://flowbite.com/
-  - ([こちらはtailwind cssのUIライブラリーをまとめている記事)[https://zenn.dev/kkeisuke/scraps/c3d668e6388676]
+  - [ドキュメント](https://flowbite.com/)
+  - [こちらはtailwind cssのUIライブラリーをまとめている記事](https://zenn.dev/kkeisuke/scraps/c3d668e6388676)
 
 ### その他おすすめプラグイン
 - モーダル(Micromodal.js)
   - yarn add micromodal --save
-  - https://micromodal.vercel.app/
-  - (参考記事)[https://pengi-n.co.jp/blog/js-micromodal/]
+  - [ドキュメント](https://micromodal.vercel.app/)
+  - [参考記事](https://pengi-n.co.jp/blog/js-micromodal/)
   - 
 - パララックス (simple parallax js)
   - yarn add simple-parallax-js
-  - https://simpleparallax.com/
-  - https://github.com/geosigno/simpleParallax.js/
-  - (参考記事)[https://coliss.com/articles/build-websites/operation/javascript/vanilla-js-library-simpleparallax.html]
+  - [ドキュメント](https://simpleparallax.com/)
+  - [github](https://github.com/geosigno/simpleParallax.js/)
+  - [参考記事](https://coliss.com/articles/build-websites/operation/javascript/vanilla-js-library-simpleparallax.html])
 
 ## フォルダ構造
 ```
 src
-|_ components (html 分割)
-|  |_layout(header,footerなどページをとうして共通している部分)
-|  |_page(ページに表示させたいものをまとめる)
-|  |_parts(ページの部分的なもの**コンポーネント**)
-|  |_tools(partsをまとめて表示させるのに使う)
+|_ _components (html 分割)
+|   |
+|   |_layout(header,footerなどページをとうして共通している部分)
+|   |
+|   |_page(ページに表示させたいものをまとめる)
+|   |
+|   |_parts(ページの部分的なもの**コンポーネント**)
+|   |
+|   |_tools(partsをまとめて表示させるのに使う)
+|
+|
 |_ scss (flocss 設計がおすすめここではcomponentと同じ構造にしています。)
+|
 |_ ts (関数コンポーネント思考)
+|
 |_ main.ts (ts をまとめるところ)
+|
 |_ index.html (ページに応じて増やす)
+|
 |_ style.scss (共通の css を書くところ)
 ```
 
@@ -140,7 +150,7 @@ src/about.html を作成した例です。
 ## css(scss)設計
 ここではcomponentと同じ構造にしています。
 flocss設計の方がいいんですかね~
-(おすすめ記事)[https://qiita.com/super-mana-chan/items/644c6827be954c8db2c0]
+[おすすめ記事](https://qiita.com/super-mana-chan/items/644c6827be954c8db2c0)
 ## 画像圧縮
 
 ~~root/vite.config 95 行あたりに書いています~~
@@ -148,7 +158,7 @@ flocss設計の方がいいんですかね~
 ~~特に書き換える必要はないかと思います。もう少しすれば画像は webp を使うことを強く勧めます~~
 動かないため削除しました。
 色々調べると圧縮率が悪いそうで
-僕が使っていた(imageoptim)[https://imageoptim.com/mac]が優秀なので DL おすすめします
+僕が使っていた[imageoptim](https://imageoptim.com/mac)が優秀なので DL おすすめします
 これからはwebpの使用をお勧めします
 
 ## NG
@@ -156,25 +166,25 @@ flocss設計の方がいいんですかね~
 - コーディオンにscrollrevealを追加すると反応してくれずアニメーションが発火しないバグが起きるので入れ子にしない(僕が書いたtsだったら動くかも...?)
 
 ## ちなみに....
-- (techfeed)[https://techfeed.io/categories/all]
-- (コリス)[https://coliss.com/]
-- (zenn)[https://zenn.dev/]
-- (wordpress私的マニュアル)[https://elearn.jp/wpman/]
-- (命名ツール)[https://codic.jp/engine/]
-- (gradation生成)[https://cssgradient.io/]
-- (clip mask generator)[https://bennettfeely.com/clippy/]
-- (can I use?)[https://caniuse.com/css-filters/]
-- (ファビコン生成)[https://favicon-generator.mintsu-dev.com/]
-- (画像圧縮)[https://squoosh.app/]
-- (画像圧縮)[https://squoosh.app/]
-- (だみー文章)[https://webtools.dounokouno.com/dummytext/]
-- (だみー画像)[https://placehold.jp/]
-- (webPについての記事)[https://webdesign-trends.net/entry/13745]
-- (コーダーができるSEO対策)[https://web-guided.com/1147/]
-- (パスワード生成)[https://www.luft.co.jp/cgi/randam.php]
-- (htpasswd生成)[https://www.luft.co.jp/cgi/htpasswd.php]
-- (javascript lesson)[https://bigfrontend.dev/ja]
-- (javascript news)[https://jser.info/]
+- [techfeed](https://techfeed.io/categories/all)
+- [コリス](https://coliss.com/)
+- [zenn](https://zenn.dev/)
+- [wordpress私的マニュアル](https://elearn.jp/wpman/)
+- [命名ツール](https://codic.jp/engine/)
+- [gradation生成](https://cssgradient.io/)
+- [clip mask generator](https://bennettfeely.com/clippy/)
+- [can I use?](https://caniuse.com/css-filters/)
+- [ファビコン生成](https://favicon-generator.mintsu-dev.com/)
+- [画像圧縮](https://squoosh.app/)
+- [画像圧縮](https://squoosh.app/)
+- [だみー文章](https://webtools.dounokouno.com/dummytext/)
+- [だみー画像](https://placehold.jp/)
+- [webPについての記事](https://webdesign-trends.net/entry/13745)
+- [コーダーができるSEO対策](https://web-guided.com/1147/)
+- [パスワード生成](https://www.luft.co.jp/cgi/randam.php)
+- [htpasswd生成](https://www.luft.co.jp/cgi/htpasswd.php)
+- [javascript lesson](https://bigfrontend.dev/ja)
+- [javascript news](https://jser.info/)
 
 僕が使っていたものです~
 
