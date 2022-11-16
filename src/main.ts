@@ -1,8 +1,6 @@
 import './style.scss';
 import 'flowbite';
 // import ScrollReveal from 'scrollreveal';
-
-// import Swiper JS
 import Swiper, {Pagination} from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -39,7 +37,7 @@ const fashionSwiper = new Swiper('.mySwiper', {
 const pageLink = document.querySelectorAll('a[href^="#"]');
 for (let i = 0; i < pageLink.length; i++) {
   pageLink[i].addEventListener('click', () => {
-    document.querySelector('.hamburger')!.classList.remove('active');
+    hamburgerBtn!.classList.remove('active');
     hamburgerMenu!.classList.remove('active');
   });
   window.scrollBy(0, -100);

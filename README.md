@@ -55,15 +55,18 @@ module.exports = {
   - https://flowbite.com/
   - ([こちらはtailwind cssのUIライブラリーをまとめている記事)[https://zenn.dev/kkeisuke/scraps/c3d668e6388676]
 
-<<<<<<< HEAD
 ### その他おすすめプラグイン
 - モーダル(Micromodal.js)
   - yarn add micromodal --save
   - https://micromodal.vercel.app/
   - (参考記事)[https://pengi-n.co.jp/blog/js-micromodal/]
+  - 
+- パララックス (simple parallax js)
+  - yarn add simple-parallax-js
+  - https://simpleparallax.com/
+  - https://github.com/geosigno/simpleParallax.js/
+  - (参考記事)[https://coliss.com/articles/build-websites/operation/javascript/vanilla-js-library-simpleparallax.html]
 
-=======
->>>>>>> 899c57ccf87e88490179302013725d17fe43486e
 ## フォルダ構造
 ```
 src
@@ -151,6 +154,29 @@ flocss設計の方がいいんですかね~
 ## NG
 - component/**.htmlに<style></style>でstyleを当ててもいいと思ったのですが、長くなったり汚くなるのでやめた方がいいです。
 - コーディオンにscrollrevealを追加すると反応してくれずアニメーションが発火しないバグが起きるので入れ子にしない(僕が書いたtsだったら動くかも...?)
+
+## ちなみに....
+- (techfeed)[https://techfeed.io/categories/all]
+- (コリス)[https://coliss.com/]
+- (zenn)[https://zenn.dev/]
+- (wordpress私的マニュアル)[https://elearn.jp/wpman/]
+- (命名ツール)[https://codic.jp/engine/]
+- (gradation生成)[https://cssgradient.io/]
+- (clip mask generator)[https://bennettfeely.com/clippy/]
+- (can I use?)[https://caniuse.com/css-filters/]
+- (ファビコン生成)[https://favicon-generator.mintsu-dev.com/]
+- (画像圧縮)[https://squoosh.app/]
+- (画像圧縮)[https://squoosh.app/]
+- (だみー文章)[https://webtools.dounokouno.com/dummytext/]
+- (だみー画像)[https://placehold.jp/]
+- (webPについての記事)[https://webdesign-trends.net/entry/13745]
+- (コーダーができるSEO対策)[https://web-guided.com/1147/]
+- (パスワード生成)[https://www.luft.co.jp/cgi/randam.php]
+- (htpasswd生成)[https://www.luft.co.jp/cgi/htpasswd.php]
+- (javascript lesson)[https://bigfrontend.dev/ja]
+- (javascript news)[https://jser.info/]
+
+僕が使っていたものです~
 
 ### メモ
 
