@@ -55,12 +55,15 @@ module.exports = {
   - https://flowbite.com/
   - ([こちらはtailwind cssのUIライブラリーをまとめている記事)[https://zenn.dev/kkeisuke/scraps/c3d668e6388676]
 
+<<<<<<< HEAD
 ### その他おすすめプラグイン
 - モーダル(Micromodal.js)
   - yarn add micromodal --save
   - https://micromodal.vercel.app/
   - (参考記事)[https://pengi-n.co.jp/blog/js-micromodal/]
 
+=======
+>>>>>>> 899c57ccf87e88490179302013725d17fe43486e
 ## フォルダ構造
 ```
 src
