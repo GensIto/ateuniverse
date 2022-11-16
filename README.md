@@ -1,5 +1,4 @@
 # vite-web
-
 このプロジェクトは gulp 脱却を目標とし作成しました。
 使っていたgulpのいいと感じたところは引き継いでいます
 
@@ -45,16 +44,25 @@ module.exports = {
 ### scrollreveal
   - スクロールアニメーションのプラグイン簡単です。凝ったものは自分で記述しないとダメです
   - https://scrollrevealjs.org/
-### flowbite
-  - tailwind cssのUIライブラリーweb制作では使うことは少なそうですが一応
-  - https://flowbite.com/
-  - ([こちらはtailwind cssのUIライブラリーをまとめている記事)[https://zenn.dev/kkeisuke/scraps/c3d668e6388676]
 ### swiper
   - スライダーのプラグイン
   - https://swiperjs.com/
+### flowbite
+  - 欲しい機能(ハンバーガーメニュー,タブ,モーダル,スライダーもできるがカスタマイズは難しそう)を追加するのに使うのがいいかも
+  - 細かいUIの設定は難しいのであくま機能をjs(ts)を書かなくても動かせるように
+  - 切り替え時などにアニメーションをつけて欲しいと言われたら、ユーザー目線では速い方がいいと押し切りましょう！！！！(無理だったら、js,tsで書いてください....)
+  - tailwind cssのUIライブラリーweb制作では使うことは少なそうですが一応
+  - https://flowbite.com/
+  - ([こちらはtailwind cssのUIライブラリーをまとめている記事)[https://zenn.dev/kkeisuke/scraps/c3d668e6388676]
+
+### その他おすすめプラグイン
+- モーダル(Micromodal.js)
+  - yarn add micromodal --save
+  - https://micromodal.vercel.app/
+  - (参考記事)[https://pengi-n.co.jp/blog/js-micromodal/]
 
 ## フォルダ構造
-
+```
 src
 |_ components (html 分割)
 |  |_layout(header,footerなどページをとうして共通している部分)
@@ -66,6 +74,7 @@ src
 |_ main.ts (ts をまとめるところ)
 |_ index.html (ページに応じて増やす)
 |_ style.scss (共通の css を書くところ)
+```
 
 あとはお好みで
 
@@ -123,7 +132,8 @@ src/about.html を作成した例です。
 このように追記すれば about.html 独自の seo に変更することができます
 
 ## css(scss)設計
-flocss設計
+ここではcomponentと同じ構造にしています。
+flocss設計の方がいいんですかね~
 (おすすめ記事)[https://qiita.com/super-mana-chan/items/644c6827be954c8db2c0]
 ## 画像圧縮
 
@@ -133,9 +143,11 @@ flocss設計
 動かないため削除しました。
 色々調べると圧縮率が悪いそうで
 僕が使っていた(imageoptim)[https://imageoptim.com/mac]が優秀なので DL おすすめします
+これからはwebpの使用をお勧めします
 
 ## NG
-component/**.htmlに<style></style>でstyleを当ててもいいと思ったのですが、長くなったり汚くなるのでやめた方がいいです。
+- component/**.htmlに<style></style>でstyleを当ててもいいと思ったのですが、長くなったり汚くなるのでやめた方がいいです。
+- コーディオンにscrollrevealを追加すると反応してくれずアニメーションが発火しないバグが起きるので入れ子にしない(僕が書いたtsだったら動くかも...?)
 
 ### メモ
 
@@ -150,7 +162,8 @@ component/**.htmlに<style></style>でstyleを当ててもいいと思ったの�
 - tailwindcss 拡張
   - https://daisyui.com/docs/install/
     - こちらかなり使いごごちがいいですが、web 制作ではテンプレートとしては使いづらいためメモ
-  - https://flowbite.com/docs/getting-started/quickstart/
-    - こちら js でしたいことも込み込みであります。もし苦戦したら導入してもいいかと
+  - ~~https://flowbite.com/docs/getting-started/quickstart/~~~
+    - ~~こちら js でしたいことも込み込みであります。もし苦戦したら導入してもいいかと~~
+    - 導入しました！
   - https://devdojo.com/tailwindcss/buttons
     - ボタンのテンプレートです

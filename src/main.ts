@@ -1,7 +1,6 @@
 import './style.scss';
-import {hamburger} from './ts/hamburger';
 import 'flowbite';
-import ScrollReveal from 'scrollreveal';
+// import ScrollReveal from 'scrollreveal';
 
 // import Swiper JS
 import Swiper, {Pagination} from 'swiper';
@@ -26,20 +25,11 @@ export const Html = document.querySelector('html');
 //
 // ======================================================================
 // @ts-ignore
-const fashionSwiper = new Swiper('.fashionSwiper', {
+const fashionSwiper = new Swiper('.mySwiper', {
   spaceBetween: 30,
   modules: [Pagination],
   pagination: {
-    el: '.fashion-swiper-pagination',
-    clickable: true
-  }
-});
-// @ts-ignore
-const goodsSwiper = new Swiper('.goodsSwiper', {
-  spaceBetween: 30,
-  modules: [Pagination],
-  pagination: {
-    el: '.goods-swiper-pagination',
+    el: '.my-swiper-pagination',
     clickable: true
   }
 });
@@ -62,14 +52,32 @@ for (let i = 0; i < accordion.length; i++) {
   });
 }
 
-// ### hamburger
-// ----------------------------------------------------------------------
-hamburger();
-
 // ### Scroll Event
 // ----------------------------------------------------------------------
-ScrollReveal().reveal('.js-scroll', {
-  duration: 1600,
-  origin: 'bottom',
-  distance: '50px'
-});
+// ▼プラグイン
+// ScrollReveal().reveal('.js-scroll', {
+//   duration: 1600,
+//   origin: 'bottom',
+//   distance: '50px'
+// });
+
+// ▼純粋TS
+// const scrollAddClass = () => {
+//   const targetElements = document.querySelectorAll('.js-scroll');
+
+//   const addClass = () => {
+//     const triggerBottom = (window.innerHeight / 5) * 4;
+//
+//     targetElements.forEach((target) => {
+//       const targetTop = target.getBoundingClientRect().top;
+//
+//       if (targetTop < triggerBottom) {
+//         target.classList.add('js-active');
+//         console.log('ADD CLASS!');
+//       }
+//     });
+//   };
+//   addClass();
+// };
+
+// window.addEventListener('scroll', scrollAddClass);
