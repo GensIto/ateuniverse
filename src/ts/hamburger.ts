@@ -1,8 +1,6 @@
-import {hamburgerBtn} from '../main';
-import {hamburgerMenu} from '../main';
-export const hamburger = () => {
-  hamburgerBtn?.addEventListener('click', () => {
-    hamburgerBtn!.classList.toggle('active');
-    hamburgerMenu!.classList.toggle('active');
+export const hamburger = (button: Element | null, menu: Element | null) => {
+  button?.addEventListener('click', () => {
+    button!.classList.toggle('active');
+    menu!.classList.toggle('active');
   });
 };

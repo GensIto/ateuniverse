@@ -3,11 +3,11 @@
   # base
 
 **************************************************************************************************** */
-
+/* tailwind cssの提供があるが 個人的なrest.css追記*/
 * {
   outline: none;
 }
-
+/* これで1rem = 10pxとなりレスポンシブでいい感じになります。 */
 html {
   font-size: calc(1000vw / 375);
 }
@@ -23,27 +23,29 @@ html {
   }
 }
 
-/* tailwind cssの提供があるが 個人的なrest.css追記*/
 body {
+  @apply text-base text-txt;
   margin: 0;
   overflow-wrap: break-word;
   word-break: break-word;
   word-break: break-all;
-}
-
-body {
-  @apply text-base text-gray-900;
+  position: relative;
+  padding: 0;
+  overflow: hidden;
   font-feature-settings: 'palt';
-
   /* メトリクスカーニングを指定する */
   font-kerning: normal;
-
   /* アンチエイリアスを指定する */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: auto;
   line-break: strict;
 }
-
+/* これでタブレットサイズでPCの感じで表示させている */
+@media print, screen and (min-width: 768px) {
+  body {
+    min-width: 1024px;
+  }
+}
 /* safariでも100vh */
 /* Avoid Chrome to see Safari hack */
 @supports (-webkit-touch-callout: none) {

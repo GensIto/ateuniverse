@@ -61,6 +61,13 @@
   resolved "https://registry.yarnpkg.com/@types/scrollreveal/-/scrollreveal-0.0.8.tgz#d0313ac67b57a32b3beb224e20af63ab13cd2696"
   integrity sha512-HwD3vSmxjEozI4+uHY7pPxB47gppsv0racBHZreEQFC6K1kBKaIUkCTwUMH6gGFEDmLrgOckfGsTvR/n2yyV6g==
 
+"@types/swiper@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@types/swiper/-/swiper-6.0.0.tgz#9934ecd569611b660a2a9bf200f25ce5ba4b4d63"
+  integrity sha512-QPZRgxZ+ivXXtzV43B3LxpXUIC7FE/EoKM+rtxngmgt2M7eeUYypZhyqZD8UxJtlBcUDw/ATGoVeSNpvBBrz2w==
+  dependencies:
+    swiper "*"
+
 acorn-node@^1.8.2:
   version "1.8.2"
   resolved "https://registry.npmjs.org/acorn-node/-/acorn-node-1.8.2.tgz"
@@ -850,7 +857,7 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-swiper@^8.4.4:
+swiper@*, swiper@^8.4.4:
   version "8.4.4"
   resolved "https://registry.yarnpkg.com/swiper/-/swiper-8.4.4.tgz#868ccad5384624e84143b469c75bc54ba004e668"
   integrity sha512-jA/8BfOZwT8PqPSnMX0TENZYitXEhNa7ZSNj1Diqh5LZyUJoBQaZcqAiPQ/PIg1+IPaRn/V8ZYVb0nxHMh51yw==

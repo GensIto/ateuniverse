@@ -1,5 +1,6 @@
 import './style.scss';
 import 'flowbite';
+import {hamburger} from './ts/hamburger';
 // import ScrollReveal from 'scrollreveal';
 import Swiper, {Pagination} from 'swiper';
 import 'swiper/css';
@@ -14,6 +15,7 @@ import 'swiper/css/pagination';
 // ----------------------------------------------------------------------
 export const hamburgerBtn = document.querySelector('#jsHamburger');
 export const hamburgerMenu = document.querySelector('#jsHamburgerMenu');
+export const targetElements = document.querySelectorAll('.js-scroll');
 export const LoadingElement = document.querySelector('#js-loading');
 export const Kv = document.querySelector('#kv');
 export const Html = document.querySelector('html');
@@ -23,7 +25,7 @@ export const Html = document.querySelector('html');
 //
 // ======================================================================
 // @ts-ignore
-const fashionSwiper = new Swiper('.mySwiper', {
+const mySwiper = new Swiper('.mySwiper', {
   spaceBetween: 30,
   modules: [Pagination],
   pagination: {
@@ -43,12 +45,9 @@ for (let i = 0; i < pageLink.length; i++) {
   window.scrollBy(0, -100);
 }
 
-const accordion = document.querySelectorAll('details');
-for (let i = 0; i < accordion.length; i++) {
-  accordion[i].addEventListener('click', () => {
-    window.scrollBy(0, -1);
-  });
-}
+// ### hamburger
+// ----------------------------------------------------------------------
+hamburger(hamburgerBtn, hamburgerMenu);
 
 // ### Scroll Event
 // ----------------------------------------------------------------------
@@ -59,23 +58,20 @@ for (let i = 0; i < accordion.length; i++) {
 //   distance: '50px'
 // });
 
-// ▼純粋TS
-// const scrollAddClass = () => {
-//   const targetElements = document.querySelectorAll('.js-scroll');
+const scrollAddClass = () => {
+  const addClass = () => {
+    const targetElements = document.querySelectorAll('.js-active');
+    const triggerBottom = (window.innerHeight / 5) * 4;
 
-//   const addClass = () => {
-//     const triggerBottom = (window.innerHeight / 5) * 4;
-//
-//     targetElements.forEach((target) => {
-//       const targetTop = target.getBoundingClientRect().top;
-//
-//       if (targetTop < triggerBottom) {
-//         target.classList.add('js-active');
-//         console.log('ADD CLASS!');
-//       }
-//     });
-//   };
-//   addClass();
-// };
+    targetElements.forEach((target) => {
+      const targetTop = target.getBoundingClientRect().top;
 
-// window.addEventListener('scroll', scrollAddClass);
+      if (targetTop < triggerBottom) {
+        target.classList.add('js-active');
+      }
+    });
+  };
+  addClass();
+};
+
+window.addEventListener('scroll', scrollAddClass);
