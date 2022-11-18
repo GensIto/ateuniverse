@@ -1,7 +1,0 @@
-dist/
-build/
-htdocs/
-temp/
-node_modules/
-src/assets/css/plugin/
-**/_sanitize.scss
