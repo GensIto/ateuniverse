@@ -10,7 +10,8 @@
     "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
     "style-lint": "stylelint --fix 'src/**/*.{scss}'",
     "prettier": "prettier --write 'src/**/*.{css,scss,html,js,ts,tsx}'",
-    "ts-check": "tsc -p tsconfig.json"
+    "ts-check": "tsc -p tsconfig.json",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@babel/polyfill": "^7.12.1",
