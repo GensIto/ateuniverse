@@ -2,5 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('./scss/base.scss');
-@import url('./scss/parts/hamburger.scss');
+@import './scss/base';
+@import './scss/layout/section.scss';
+@import './scss/page/home.scss';
+@import './scss/parts/hamburger';

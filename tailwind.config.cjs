@@ -14,6 +14,9 @@ module.exports = {
       //? ここの中は追加のイメージ
       colors: {
         txt: '#333333'
+      },
+      fontFamily: {
+        oswald: ['Oswald']
       }
     }
   },

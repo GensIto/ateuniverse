@@ -31,19 +31,37 @@ for (let i = 0; i < htmlFileList.length; i++) {
 const pageData = {
   '/index.html': {
     isHome: true,
-    title: 'title',
-    description: 'description',
-    keywords: 'keywords',
+    title: 'dummy | TOP',
+    description: 'dummy description TOP',
+    keywords: 'TOP',
+    type: 'website',
+    ogImg: '',
+    ogUrl: '',
+    icon: '',
+    lang: 'ja'
+  },
+  '/about.html': {
+    isHome: true,
+    title: 'dummy | ABOUT',
+    description: 'dummy description ABOUT',
+    keywords: 'ABOUT',
+    type: 'website',
+    ogImg: '',
+    ogUrl: '',
+    icon: '',
+    lang: 'ja'
+  },
+  '/contact.html': {
+    isHome: true,
+    title: 'dummy | CONTACT',
+    description: 'dummy description CONTACT',
+    keywords: 'CONTACT',
     type: 'website',
     ogImg: '',
     ogUrl: '',
     icon: '',
     lang: 'ja'
   }
-  // "/list.html": {
-  //   isHome: false,
-  //   title: "List Page",
-  // },
 };
 
 export default defineConfig({

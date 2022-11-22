@@ -1,7 +1,8 @@
-/* tailwind cssの提供があるが 個人的なrest.css追記*/
+/* tailwind cssの提供があるが 個人的なrest.css追記 */
 * {
   outline: none;
 }
+
 html {
   font-size: calc(1000vw / 375);
 }
@@ -15,17 +16,19 @@ html {
     font-size: calc(1000vw / 1920);
   }
 }
+
 body {
   @apply text-base text-txt;
-  margin: 0;
-  overflow-wrap: break-word;
-  word-break: break-word;
-  word-break: break-all;
+
   position: relative;
   padding: 0;
-  overflow: hidden;
+  margin: 0;
+  overflow-x: hidden;
   font-feature-settings: 'palt';
   font-kerning: normal;
+  word-break: break-word;
+  word-break: break-all;
+  overflow-wrap: break-word;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: auto;
   line-break: strict;
@@ -35,16 +38,20 @@ body {
     min-width: 1024px;
   }
 }
-/* safariでも100vh */
+
+/* safariでも100vh
 @supports (-webkit-touch-callout: none) {
   body {
-    height: -webkit-fill-available;
+    height: fill-available;
   }
 }
+*/
+
 details > summary {
-  cursor: pointer;
   list-style: none !important;
+  cursor: pointer;
 }
+
 details > summary::-webkit-details-marker {
   display: none;
 }

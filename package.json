@@ -6,8 +6,6 @@
   "scripts": {
     "dev": "vite && vite preview",
     "build": "tsc && vite build",
-    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
-    "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
     "prettier": "prettier --write 'src/**/*.{css,scss,html,js,ts,tsx}'",
     "ts-check": "tsc -p tsconfig.json",
     "prepare": "husky install"
@@ -18,8 +16,8 @@
     "@types/scrollreveal": "^0.0.8",
     "@types/swiper": "^6.0.0",
     "autoprefixer": "^10.4.13",
-    "eslint": "^8.27.0",
     "husky": "^8.0.2",
+    "postcss": "^8.4.19",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.13",
     "sass": "^1.55.0",

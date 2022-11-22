@@ -60,7 +60,7 @@ hamburger(hamburgerBtn, hamburgerMenu);
 
 const scrollAddClass = () => {
   const addClass = () => {
-    const targetElements = document.querySelectorAll('.js-active');
+    const targetElements = document.querySelectorAll('.js-scroll');
     const triggerBottom = (window.innerHeight / 5) * 4;
 
     targetElements.forEach((target) => {

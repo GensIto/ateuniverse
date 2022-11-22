@@ -1,7 +1,14 @@
+/* ****************************************************************************************************
+
+ # menu
+
+**************************************************************************************************** */
+
 .p-hamburger__menu {
+  width: 40%;
   transition: 1s;
   transform: translateX(120%);
-  @apply text-base text-white;
+  @apply absolute right-0 top-0 z-10 text-base text-white;
 }
 
 .p-hamburger__menu.active {
@@ -10,31 +17,50 @@
   transform: translateX(0%);
 }
 
-@media print, screen and (min-width: 768px) {
-  .p-hamburger__menu {
-    transition: 1s;
-    transform: translateX(0%);
-  }
+.p-hamburger__menu__list {
+  background-color: rgba($color: #000000, $alpha: 0.7);
 }
 
+/* ****************************************************************************************************
+
+ # line
+
+**************************************************************************************************** */
 .p-hamburger__line {
-  @apply absolute h-px w-12 bg-white;
+  transition: 1s;
+  @apply absolute  h-px w-full bg-white;
+  &:nth-child(1) {
+    transition: 1s;
+    @apply top-0;
+  }
+  &:nth-child(2) {
+    transition: 1s;
+    @apply top-2/4;
+  }
+  &:nth-child(3) {
+    transition: 1s;
+    @apply bottom-0;
+  }
 }
 
 #jsHamburger.active {
   .p-hamburger__line {
     &:nth-child(1) {
       transition: 1s;
-      transform: rotate(45deg);
+      transform: rotate(25deg);
+      @apply top-2/4;
     }
+
     &:nth-child(2) {
-      transition: 1s;
       opacity: 0;
+      transition: 1s;
       transform: translateX(100%);
     }
+
     &:nth-child(3) {
       transition: 1s;
-      transform: rotate(-45deg);
+      transform: rotate(-25deg);
+      @apply top-2/4;
     }
   }
 }
