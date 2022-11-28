@@ -3,6 +3,8 @@ module.exports = {
     'postcss-import': {},
     'tailwindcss/nesting': {},
     tailwindcss: {},
-    autoprefixer: {}
+    autoprefixer: {},
+    'postcss-sort-media-queries': {},
+    'css-declaration-sorter': {order: 'smacss'}
   }
 };
