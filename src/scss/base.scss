@@ -1,4 +1,5 @@
 /* tailwind cssの提供があるが 個人的なrest.css追記 */
+
 * {
   outline: none;
 }
@@ -6,11 +7,13 @@
 html {
   font-size: calc(1000vw / 375);
 }
+
 @media print, screen and (min-width: 768px) {
   html {
     font-size: 62.5%;
   }
 }
+
 @media print, screen and (min-width: 1920px) {
   html {
     font-size: calc(1000vw / 1920);
@@ -19,7 +22,6 @@ html {
 
 body {
   @apply text-base text-txt;
-
   position: relative;
   padding: 0;
   margin: 0;
@@ -27,12 +29,12 @@ body {
   font-feature-settings: 'palt';
   font-kerning: normal;
   word-break: break-word;
-  word-break: break-all;
   overflow-wrap: break-word;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: auto;
   line-break: strict;
 }
+
 @media print, screen and (min-width: 768px) {
   body {
     min-width: 1024px;
@@ -48,7 +50,7 @@ body {
 */
 
 details > summary {
-  list-style: none !important;
+  list-style: none;
   cursor: pointer;
 }
 

@@ -13,8 +13,8 @@ import 'swiper/css/pagination';
 // ======================================================================
 // ### hamburger
 // ----------------------------------------------------------------------
-export const hamburgerBtn = document.querySelector('#jsHamburger');
-export const hamburgerMenu = document.querySelector('#jsHamburgerMenu');
+export const hamburgerBtn = document.querySelector('#js-hamburger');
+export const hamburgerMenu = document.querySelector('#js-hamburger-menu');
 export const targetElements = document.querySelectorAll('.js-scroll');
 export const LoadingElement = document.querySelector('#js-loading');
 export const Kv = document.querySelector('#kv');
