@@ -9,8 +9,8 @@
     "prettier": "prettier --write 'src/**/*.{css,scss,html,js,ts,tsx}'",
     "ts-check": "tsc -p tsconfig.json",
     "prepare": "husky install",
-    "lint:style": "stylelint '**/*.{css,scss,sass}'",
-    "lint:style:fix": "stylelint --fix '**/*.{css,scss,sass}'"
+    "lint:style": "stylelint 'src/**/*.{css,scss,sass}'",
+    "lint:style:fix": "stylelint --fix 'src/**/*.{css,scss,sass}'"
   },
   "devDependencies": {
     "@babel/polyfill": "^7.12.1",

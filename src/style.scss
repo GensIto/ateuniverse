@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@use './scss/base';
-@use './scss/layout/section';
-@use './scss/page/home';
-@use './scss/parts/hamburger';
+@import './scss/base';
+@import './scss/layout/section';
+@import './scss/page/home';
+@import './scss/parts/hamburger';

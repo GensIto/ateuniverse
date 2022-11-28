@@ -26,6 +26,8 @@ module.exports = {
     'keyframe-declaration-no-important': true,
     'custom-property-no-missing-var-function': true,
     'declaration-no-important': true,
-    'max-nesting-depth': 2
+    'max-nesting-depth': 2,
+    'import-notation': 'string',
+    'no-invalid-position-at-import-rule': null
   }
 };
