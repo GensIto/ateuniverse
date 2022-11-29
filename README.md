@@ -16,9 +16,9 @@
 このプロジェクトでは **1rem = 10px**になるようにcssで制御しています
 カスタマイズはtailwind.config.cjsを参照してください
 figmaとの相性もいいらしい?ソフトウェア開発っぽくなりますが共存できればかなりコーディングスピード上がりそうです。
-[チートシート](https://tailwindcomponents.com/cheatsheet/)
-[アニメーション生成ツール](https://tail-animista.vercel.app/play/basic/scale-up/scale-up-center)
-[アニメーション生成ツール参考記事](https://zenn.dev/angelecho/articles/f171ca2b3b1f6a)
+- [チートシート](https://tailwindcomponents.com/cheatsheet/)
+- [アニメーション生成ツール](https://tail-animista.vercel.app/play/basic/scale-up/scale-up-center)
+- [アニメーション生成ツール参考記事](https://zenn.dev/angelecho/articles/f171ca2b3b1f6a)
 ```
 /** @type {import('tailwindcss').Config} */
 module.exports = {
