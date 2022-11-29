@@ -71,6 +71,13 @@ htmlが冗長になりそうなときは@applyを使いscssに書くことでシ
   - [ドキュメント](https://simpleparallax.com/)
   - [github](https://github.com/geosigno/simpleParallax.js/)
   - [参考記事](https://coliss.com/articles/build-websites/operation/javascript/vanilla-js-library-simpleparallax.html])
+- tailwindcss-line-clamp
+  - wordpressの開発などに便利かと思います。
+  - 行数を指定できてそれ以上は表示されなくなります
+  - yarn add @tailwindcss/line-clamp -D
+  - [ドキュメント](https://tailwindcss.com/docs/plugins#line-clamp)
+  - [github](https://github.com/tailwindlabs/tailwindcss-line-clamp)
+  - [挙動が分かり易い記事](https://blog.cohu.dev/tailwind-css-tools#@tailwindcss/line-clamp)
 
 ## フォルダ構造
 ```
