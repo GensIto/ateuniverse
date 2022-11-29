@@ -15,6 +15,10 @@
 ## tailwind css
 このプロジェクトでは **1rem = 10px**になるようにcssで制御しています
 カスタマイズはtailwind.config.cjsを参照してください
+figmaとの相性もいいらしい?ソフトウェア開発っぽくなりますが共存できればかなりコーディングスピード上がりそうです。
+[チートシート](https://tailwindcomponents.com/cheatsheet/)
+[アニメーション生成ツール](https://tail-animista.vercel.app/play/basic/scale-up/scale-up-center)
+[アニメーション生成ツール参考記事](https://zenn.dev/angelecho/articles/f171ca2b3b1f6a)
 ```
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -39,6 +43,7 @@ module.exports = {
 };
 
 ```
+htmlが冗長になりそうなときは@applyを使いscssに書くことでシュッとなると思います
 
 ## プラグイン簡単な説明
 ### scrollreveal
@@ -162,8 +167,8 @@ flocss設計の方がいいんですかね~
 これからはwebpの使用をお勧めします
 
 ## NG
-- component/**.htmlに<style></style>でstyleを当ててもいいと思ったのですが、長くなったり汚くなるのでやめた方がいいです。
-- コーディオンにscrollrevealを追加すると反応してくれずアニメーションが発火しないバグが起きるので入れ子にしない(僕が書いたtsだったら動くかも...?)
+- component/**.htmlに<style></style>でstyleを当ててもいいと思ったのですが、長くなったり汚くなるのでやめた方がいいです。partsぐらい小さいものならいい子もです~
+- コーディオンにscrollrevealを追加すると反応してくれずアニメーションが発火しないバグが起きるので入れない
 
 ## ちなみに....
 - [techfeed](https://techfeed.io/categories/all)
@@ -188,6 +193,13 @@ flocss設計の方がいいんですかね~
 
 僕が使っていたものです~
 
+### husky
+gitなどでコードを管理する時に便利でコードの品質を担保したり,コードレビューの負担を減らせたりするものです
+このプロジェクトではcommit時に以下のものが走ります。
+- yarn prettier コード整形
+- yarn lint:style:fix styleを事前に綺麗にする
+- yarn lint:style styleが綺麗か確認する
+- yarn ts-check tsに危険なものがないかチェックする
 ### メモ
 
 - html に tailwind css 読み込み
