@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{lang}}" class="loading">
+<html lang="{{lang}}">
   <head>
     {{> layout/meta}}
   </head>
@@ -9,8 +9,10 @@
       <section class="">{{> tools/kv}}</section>
       <section class="section">{{> page/home/about}}</section>
       <section class="section">{{> page/home/card}}</section>
+      <section class="section">{{> tools/modal}}</section>
+      <section class="section">{{> tools/card}}</section>
     </main>
-    {{> layout/footer}}
+    {{> layout/footer}} {{> layout/loading}}
     <script type="module" src="./main.ts"></script>
   </body>
 </html>

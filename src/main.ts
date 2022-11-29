@@ -1,6 +1,7 @@
 import './style.scss';
 import 'flowbite';
 import {hamburger} from './ts/hamburger';
+import {scrollAddClass} from './ts/scrollAddClass';
 // import ScrollReveal from 'scrollreveal';
 import Swiper, {Pagination} from 'swiper';
 import 'swiper/css';
@@ -19,6 +20,7 @@ export const targetElements = document.querySelectorAll('.js-scroll');
 export const LoadingElement = document.querySelector('#js-loading');
 export const Kv = document.querySelector('#kv');
 export const Html = document.querySelector('html');
+export const targetElement = document.querySelectorAll('.js-scroll');
 // ======================================================================
 //
 // ## functions
@@ -34,6 +36,10 @@ const mySwiper = new Swiper('.mySwiper', {
   }
 });
 
+// ### hamburger
+// ----------------------------------------------------------------------
+hamburger(hamburgerBtn, hamburgerMenu);
+
 // ### ページ内リンクでハンバーガーが閉じるように
 // ----------------------------------------------------------------------
 const pageLink = document.querySelectorAll('a[href^="#"]');
@@ -45,10 +51,6 @@ for (let i = 0; i < pageLink.length; i++) {
   window.scrollBy(0, -100);
 }
 
-// ### hamburger
-// ----------------------------------------------------------------------
-hamburger(hamburgerBtn, hamburgerMenu);
-
 // ### Scroll Event
 // ----------------------------------------------------------------------
 // ▼プラグイン
@@ -58,20 +60,17 @@ hamburger(hamburgerBtn, hamburgerMenu);
 //   distance: '50px'
 // });
 
-const scrollAddClass = () => {
-  const addClass = () => {
-    const targetElements = document.querySelectorAll('.js-scroll');
-    const triggerBottom = (window.innerHeight / 5) * 4;
+window.addEventListener('scroll', () => {
+  scrollAddClass(targetElement);
+});
 
-    targetElements.forEach((target) => {
-      const targetTop = target.getBoundingClientRect().top;
+const loading = document.querySelector('.loading');
 
-      if (targetTop < triggerBottom) {
-        target.classList.add('js-active');
-      }
-    });
-  };
-  addClass();
-};
-
-window.addEventListener('scroll', scrollAddClass);
+window.addEventListener(
+  'load',
+  () => {
+    Html?.classList.add('loaded');
+    loading!.classList.add('hide');
+  },
+  false
+);
