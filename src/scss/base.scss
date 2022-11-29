@@ -9,15 +9,17 @@ html {
   font-size: calc(1000vw / 375);
 }
 
-@media print, screen and (min-width: 768px) {
+@media print, screen and (min-width: 620px) {
   html {
     font-size: 62.5%;
   }
 }
 
-@media print, screen and (min-width: 1920px) {
+@media print, screen and (min-width: 1600px) {
   html {
-    font-size: calc(1000vw / 1920);
+    /* 1600pxから、100pxごとに1px大きくなる */
+    font-size: calc(112.5% + 4 * (100vw - 600px) / 400);
+    /*  デフォルト font-size: calc(1000vw / 1920); */
   }
 }
 
