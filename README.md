@@ -218,6 +218,8 @@ gitなどでコードを管理する時に便利でコードの品質を担保�
   - https://zenn.dev/sakata_kazuma/articles/59a741489c8bbc
 
 - tailwindcss 拡張
+  - https://blog.cohu.dev/tailwind-css-tools#@tailwindcss/line-clamp
+    - なんかめっちゃまとめてあった記事
   - https://daisyui.com/docs/install/
     - こちらかなり使いごごちがいいですが、web 制作ではテンプレートとしては使いづらいためメモ
   - ~~https://flowbite.com/docs/getting-started/quickstart/~~~
