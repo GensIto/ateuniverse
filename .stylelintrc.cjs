@@ -28,6 +28,7 @@ module.exports = {
     'declaration-no-important': true,
     'max-nesting-depth': 2,
     'import-notation': 'string',
-    'no-invalid-position-at-import-rule': null
+    'no-invalid-position-at-import-rule': null,
+    'selector-id-pattern': null
   }
 };

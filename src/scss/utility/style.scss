@@ -64,6 +64,7 @@
 
 .u-txt-bottom-line {
   @apply relative w-fit;
+
   &::after {
     @apply absolute -bottom-4 left-1/2 h-1 w-12 -translate-x-1/2 rounded-lg bg-black;
     content: '';

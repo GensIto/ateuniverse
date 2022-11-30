@@ -69,12 +69,13 @@ p {
 }
 
 .js-scroll {
-  transform: translateY(10px);
   opacity: 0;
   transition: 1s;
+  transform: translateY(10px);
 }
+
 .js-scroll.js-active {
-  transform: translateY(0);
   opacity: 1;
   transition: 1s;
+  transform: translateY(0);
 }
