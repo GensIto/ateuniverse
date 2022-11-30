@@ -10,6 +10,9 @@ module.exports = {
       lg: '2rem', //! 20px
       xl: '2.2rem' //! 22px
     },
+    container: {
+      center: true //? 中央寄せにする
+    },
     extend: {
       //? ここの中は追加のイメージ
       colors: {
@@ -20,5 +23,26 @@ module.exports = {
       }
     }
   },
-  plugins: [require('flowbite/plugin')]
+  plugins: [
+    require('flowbite/plugin'),
+    function ({addComponents}) {
+      addComponents({
+        '.container': {
+          maxWidth: '100%',
+          '@screen sm': {
+            maxWidth: '640px'
+          },
+          '@screen md': {
+            maxWidth: '768px'
+          },
+          '@screen lg': {
+            maxWidth: '1280px'
+          },
+          '@screen xl': {
+            maxWidth: '1400px'
+          }
+        }
+      });
+    }
+  ]
 };

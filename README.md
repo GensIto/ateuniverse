@@ -19,6 +19,10 @@ figmaとの相性もいいらしい?ソフトウェア開発っぽくなりま�
 - [チートシート](https://tailwindcomponents.com/cheatsheet/)
 - [アニメーション生成ツール](https://tail-animista.vercel.app/play/basic/scale-up/scale-up-center)
 - [アニメーション生成ツール参考記事](https://zenn.dev/angelecho/articles/f171ca2b3b1f6a)
+- [.containerのカスタマイズ](https://www.memory-lovers.blog/entry/2022/10/14/120000)
+- [tailwin default config](https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js)こちらでカスタマイズできるものが確認できます
+- [任意の値を入れる](https://runebook.dev/ja/docs/tailwindcss/adding-custom-styles)
+- [tailwind css 3(日本語訳)](https://runebook.dev/ja/docs/tailwindcss/-index-)
 ```
 /** @type {import('tailwindcss').Config} */
 module.exports = {
