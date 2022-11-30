@@ -61,12 +61,24 @@ const pageData = {
     ogUrl: '',
     icon: '',
     lang: 'ja'
+  },
+  '/single.html': {
+    isHome: true,
+    title: 'dummy | SINGLE',
+    description: 'dummy description SINGLE',
+    keywords: 'SINGLE',
+    type: 'website',
+    ogImg: '',
+    ogUrl: '',
+    icon: '',
+    lang: 'ja'
   }
 };
 
 export default defineConfig({
   server: {
     host: true //IPアドレスを有効化
+    // port: 3000 //任意のポートに変更
   },
   root: './src', //開発ディレクトリ設定
   build: {

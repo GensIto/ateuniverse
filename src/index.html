@@ -6,17 +6,9 @@
   <body>
     {{> layout/header}}
     <main class="bg-gray-300">
-      <section class="">{{> tools/kv}}</section>
-      <section class="section">{{> page/home/about}}</section>
-      <section class="section">{{> page/home/card}}</section>
-      <section class="section">{{> tools/modal}}</section>
-      <section class="section">{{> tools/card}}</section>
-      <section class="section">
-        <div class="u-arrow-top relative h-24 w-24"></div>
-        <div class="u-arrow-right relative h-24 w-24"></div>
-        <div class="u-arrow-bottom relative h-24 w-24"></div>
-        <div class="u-arrow-left relative h-24 w-24"></div>
-      </section>
+      <section class="">{{> tools/home/kv}}</section>
+      <section class="section">{{> tools/home/pickup}}</section>
+      <section class="section">{{> tools/home/card}}</section>
     </main>
     {{> layout/footer}} {{> layout/loading}}
     <script type="module" src="./main.ts"></script>

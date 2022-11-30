@@ -5,4 +5,9 @@
 @import './scss/base';
 @import './scss/layout/section';
 @import './scss/parts/hamburger';
-@import './scss/utility/style.scss';
+@import './scss/tools/tab';
+@import './scss/utility/style';
+
+html.gnav-open {
+  overflow: hidden;
+}

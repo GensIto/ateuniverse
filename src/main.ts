@@ -3,7 +3,7 @@ import 'flowbite';
 import {hamburger} from './ts/hamburger';
 import {scrollAddClass} from './ts/scrollAddClass';
 // import ScrollReveal from 'scrollreveal';
-import Swiper, {Pagination} from 'swiper';
+import Swiper, {Autoplay} from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -27,18 +27,31 @@ export const targetElement = document.querySelectorAll('.js-scroll');
 //
 // ======================================================================
 // @ts-ignore
-const mySwiper = new Swiper('.mySwiper', {
-  spaceBetween: 30,
-  modules: [Pagination],
+const swiper = new Swiper('.pickSwiper', {
+  slidesPerView: 2,
+  spaceBetween: 20,
+  centeredSlides: true,
+  loop: true,
+  modules: [Autoplay],
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false
+  },
   pagination: {
-    el: '.my-swiper-pagination',
+    el: '.swiper-pagination',
     clickable: true
+  },
+  breakpoints: {
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 50
+    }
   }
 });
 
 // ### hamburger
 // ----------------------------------------------------------------------
-hamburger(hamburgerBtn, hamburgerMenu);
+hamburger(hamburgerBtn, hamburgerMenu, Html);
 
 // ### ページ内リンクでハンバーガーが閉じるように
 // ----------------------------------------------------------------------

@@ -19,6 +19,7 @@ module.exports = {
         txt: '#333333'
       },
       fontFamily: {
+        noto: ['Noto Sans JP'],
         oswald: ['Oswald']
       }
     }

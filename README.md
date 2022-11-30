@@ -2,6 +2,11 @@
 このプロジェクトは gulp 脱却を目標とし作成しました。
 使っていたgulpのいいと感じたところは引き継いでいます
 
+## サイトデザイン
+[作って学ぶコーディング学習サイト](https://code-step.com/)さんの無料カンプのレイアウトを参考に組ませていただきました。
+- [TOP](https://xd.adobe.com/view/f30fe031-d0a3-4e98-a1c1-a309c5add0c6-a65c/grid?hints=off)
+- [ABOUT](https://xd.adobe.com/view/d3d624d6-c12a-4ce8-82fd-e046d7c76dd2-8685/grid?hints=off)
+- [SINGLE](https://xd.adobe.com/view/8d0c7d5c-194e-4793-842d-449d7581170a-d85f/grid?hints=off)
 ## 採用技術
 
 - vite
@@ -23,6 +28,8 @@ figmaとの相性もいいらしい?ソフトウェア開発っぽくなりま�
 - [tailwin default config](https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js)こちらでカスタマイズできるものが確認できます
 - [任意の値を入れる](https://runebook.dev/ja/docs/tailwindcss/adding-custom-styles)
 - [tailwind css 3(日本語訳)](https://runebook.dev/ja/docs/tailwindcss/-index-)
+- [tailwind css grid generator](https://www.tailwind-tools.com/grid)
+- [tailwind css gradation template](https://hypercolor.dev/)
 ```
 /** @type {import('tailwindcss').Config} */
 module.exports = {

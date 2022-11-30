@@ -1,0 +1,22 @@
+/* ****************************************************************************************************
+
+ # タブ機能のみの実装
+
+**************************************************************************************************** */
+/*ラジオボタンを全て消す*/
+input[name='t-tab_tab_head'] {
+  display: none;
+}
+
+/*タブ切り替えの中身のスタイル*/
+.t-tab_content {
+  display: none;
+  overflow: hidden;
+}
+
+/*選択されているタブのコンテンツのみを表示*/
+#all:checked ~ #all_content,
+#programming:checked ~ #programming_content,
+#design:checked ~ #design_content {
+  display: block;
+}
