@@ -5,12 +5,12 @@
 **************************************************************************************************** */
 
 /* ラジオボタンを全て消す */
-input[name='t-tab_tab_head'] {
+input[name='tab_tab_head'] {
   display: none;
 }
 
 /* タブ切り替えの中身のスタイル */
-.t-tab_content {
+.tab_content {
   display: none;
   overflow: hidden;
 }

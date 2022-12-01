@@ -102,18 +102,25 @@ src
 |   |_tools(partsをまとめて表示させるのに使う)
 |
 |
-|_ scss (flocss 設計がおすすめここではcomponentと同じ構造にしています。)
-|
 |_ ts (関数コンポーネント思考)
 |
 |_ main.ts (ts をまとめるところ)
 |
 |_ index.html (ページに応じて増やす)
 |
-|_ style.scss (共通の css を書くところ)
+|_ style.scss (scss の読み込みをを書くところ)
 ```
 
-あとはお好みで
+scssの配置場所は,例えばbuttonを作りたい時
+components/parts/button フォルダを作成しそこにindex.htmlとstyle.scssを作る
+```
+components
+|_ parts
+  |__ button
+    |_ index.html
+    |_ style.scss
+```
+scssフォルダを作成していましたが基本tailwindで書くことになるので、scssフォルダの存在意義があまりないと感じ削除しました。。そのためもっとどこにscssファイルがあるか明瞭的にしたかったのでフォルダの配下にhtml&scssを配置することでファイル生成&ファイル変更がしやすくなると思います。
 
 ## ページを増やすとき
 

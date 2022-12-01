@@ -1,12 +1,6 @@
 <!-- <p>{{#if isHome}} トップページ {{else}} 子ページ {{/if}}</p> -->
 <header class="absolute top-0 z-10 flex w-full items-center justify-between px-6 py-4">
   <div class="text-6xl font-oswald text-white">TAILWIND DEMO</div>
-  <div class="z-20 flex items-center justify-center gap-4">
-    <div id="js-hamburger" class="relative h-10 w-14 hover:cursor-pointer">
-      <span class="p-hamburger__line"></span>
-      <span class="p-hamburger__line"></span>
-      <span class="p-hamburger__line"></span>
-    </div>
-  </div>
-  {{> parts/hamburger-menu}}
+  <div class="z-20 flex items-center justify-center gap-4">{{> parts/hamburger-btn/index}}</div>
+  {{> parts/hamburger-menu/index}}
 </header>
