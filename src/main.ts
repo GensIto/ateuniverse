@@ -14,20 +14,40 @@ import 'swiper/css/pagination';
 // ## DOM
 //
 // ======================================================================
-// ### hamburger
-// ----------------------------------------------------------------------
 export const hamburgerBtn = document.querySelector('#js-hamburger');
 export const hamburgerMenu = document.querySelector('#js-hamburger-menu');
-export const targetElements = document.querySelectorAll('.js-scroll');
-export const Kv = document.querySelector('#kv');
 export const Html = document.querySelector('html');
-export const targetElement = document.querySelectorAll('.js-scroll');
+export const targetElements = document.querySelectorAll('.js-scroll');
 export const LoadingElement = document.querySelector('.loading');
+
 // ======================================================================
 //
 // ## functions
 //
 // ======================================================================
+
+// ### Load Event
+// ----------------------------------------------------------------------
+loading(Html, LoadingElement);
+
+// ### Scroll Event
+// ----------------------------------------------------------------------
+// ▼プラグイン
+// ScrollReveal().reveal('.js-scroll', {
+//   duration: 1600,
+//   origin: 'bottom',
+//   distance: '50px'
+// });
+
+scrollAddClass(targetElements);
+commonScroll(Html);
+
+// ### Click Event
+// ----------------------------------------------------------------------
+hamburger(hamburgerBtn, hamburgerMenu, Html);
+
+// ### Other
+// ----------------------------------------------------------------------
 // @ts-ignore
 const swiper = new Swiper('.pickSwiper', {
   slidesPerView: 2,
@@ -50,21 +70,3 @@ const swiper = new Swiper('.pickSwiper', {
     }
   }
 });
-
-loading(Html, LoadingElement);
-
-// ### hamburger
-// ----------------------------------------------------------------------
-hamburger(hamburgerBtn, hamburgerMenu, Html);
-
-// ### Scroll Event
-// ----------------------------------------------------------------------
-// ▼プラグイン
-// ScrollReveal().reveal('.js-scroll', {
-//   duration: 1600,
-//   origin: 'bottom',
-//   distance: '50px'
-// });
-
-scrollAddClass(targetElement);
-commonScroll(Html);
