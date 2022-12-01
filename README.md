@@ -193,7 +193,7 @@ flocss設計の方がいいんですかね~
 動かないため削除しました。
 色々調べると圧縮率が悪いそうで
 僕が使っていた[imageoptim](https://imageoptim.com/mac)が優秀なので DL おすすめします
-これからはwebpの使用をお勧めします
+これからはwebpの使用がいいみたいです[サルワカ道具箱](https://saruwakakun.com/tools/png-jpeg-to-webp/)
 
 ## NG
 - component/**.htmlに<style></style>でstyleを当ててもいいと思ったのですが、長くなったり汚くなるのでやめた方がいいです。partsぐらい小さいものならいいかもです~
