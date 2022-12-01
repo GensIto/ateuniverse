@@ -11,7 +11,7 @@
   @apply absolute right-0 top-0 z-10  w-2/3 text-base  text-white md:w-2/5;
 }
 
-.p-hamburger__menu.active {
+.p-hamburger__menu.js-active {
   display: block;
   transition: 1s;
   transform: translateX(0%);

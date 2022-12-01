@@ -24,6 +24,16 @@ html {
   }
 }
 
+/* loadingに依存しているstyleどこに書くか迷ってとりあえずここに書いています */
+html.is-load {
+  overflow: hidden;
+}
+
+/* ハンバーガーに依存しているstyleどこに書くか迷ってとりあえずここに書いています */
+html.gnav-open {
+  overflow: hidden;
+}
+
 body {
   @apply text-base text-txt;
   position: relative;
@@ -37,6 +47,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: auto;
   line-break: strict;
+}
+html.is-load > body {
+  max-height: 100vh;
+  overflow: hidden;
 }
 
 @media print, screen and (min-width: 768px) {

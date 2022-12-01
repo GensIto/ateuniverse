@@ -106,6 +106,8 @@ src
 |
 |_ main.ts (ts をまとめるところ)
 |
+|_ scss (大きな枠のstyle layoutやfoundation)
+|
 |_ index.html (ページに応じて増やす)
 |
 |_ style.scss (scss の読み込みをを書くところ)
@@ -120,7 +122,11 @@ components
     |_ index.html
     |_ style.scss
 ```
-scssフォルダを作成していましたが基本tailwindで書くことになるので、scssフォルダの存在意義があまりないと感じ削除しました。。そのためもっとどこにscssファイルがあるか明瞭的にしたかったのでフォルダの配下にhtml&scssを配置することでファイル生成&ファイル変更がしやすくなると思います。
+scssフォルダを作成していましたが基本tailwindで書くことになるので、layoutやfoundationを書く初期設定のような物を書く想定にしています。
+scssフォルダ配下にはflocssのようにl-やu-などフォルデ名の頭文字をつけて判別してください。
+componentsのstyleを明瞭的にしたかったのでフォルダの配下にhtml&scssを配置することでファイル生成&ファイル変更がしやすくなると思います。
+componentsフォルダ配下のクラス名はそのままフォルダ名でいいかと思います。
+(例) button -> .button-wrap
 
 ## ページを増やすとき
 
@@ -190,7 +196,7 @@ flocss設計の方がいいんですかね~
 これからはwebpの使用をお勧めします
 
 ## NG
-- component/**.htmlに<style></style>でstyleを当ててもいいと思ったのですが、長くなったり汚くなるのでやめた方がいいです。partsぐらい小さいものならいい子もです~
+- component/**.htmlに<style></style>でstyleを当ててもいいと思ったのですが、長くなったり汚くなるのでやめた方がいいです。partsぐらい小さいものならいいかもです~
 - コーディオンにscrollrevealを追加すると反応してくれずアニメーションが発火しないバグが起きるので入れない
 
 ## ちなみに....

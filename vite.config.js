@@ -51,17 +51,6 @@ const pageData = {
     icon: '',
     lang: 'ja'
   },
-  '/contact.html': {
-    isHome: true,
-    title: 'dummy | CONTACT',
-    description: 'dummy description CONTACT',
-    keywords: 'CONTACT',
-    type: 'website',
-    ogImg: '',
-    ogUrl: '',
-    icon: '',
-    lang: 'ja'
-  },
   '/single.html': {
     isHome: true,
     title: 'dummy | SINGLE',
@@ -100,11 +89,15 @@ export default defineConfig({
           //ビルド時のCSS名を明記してコントロールする
           if (extType === 'css') {
             return `assets/css/style.css`;
+            // return `style.css`;
           }
           return `assets/${extType}/[name][extname]`;
+          // return `${extType}/[name][extname]`;
         },
         chunkFileNames: 'assets/js/[name].js',
         entryFileNames: 'assets/js/[name].js'
+        // chunkFileNames: '[name].js',
+        // entryFileNames: '[name].js'
       },
       //生成オブジェクトを渡す
       input: inputFiles
