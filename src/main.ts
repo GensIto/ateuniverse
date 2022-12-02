@@ -4,6 +4,7 @@ import {hamburger} from './ts/hamburger';
 import {scrollAddClass} from './ts/scrollAddClass';
 import {commonScroll} from './ts/commonScroll';
 import {loading} from './ts/loading';
+import {fetchApi} from './ts/fetchApi';
 // import ScrollReveal from 'scrollreveal';
 import Swiper, {Autoplay} from 'swiper';
 import 'swiper/css';
@@ -19,6 +20,8 @@ export const hamburgerMenu = document.querySelector('#js-hamburger-menu');
 export const Html = document.querySelector('html');
 export const targetElements = document.querySelectorAll('.js-scroll');
 export const LoadingElement = document.querySelector('.loading');
+export const parentElement = document.querySelector('#fetch-api');
+export const fetchUrl = 'https://jsonplaceholder.typicode.com/users';
 
 // ======================================================================
 //
@@ -29,6 +32,7 @@ export const LoadingElement = document.querySelector('.loading');
 // ### Load Event
 // ----------------------------------------------------------------------
 loading(Html, LoadingElement);
+fetchApi(parentElement, fetchUrl);
 
 // ### Scroll Event
 // ----------------------------------------------------------------------
@@ -39,7 +43,7 @@ loading(Html, LoadingElement);
 //   distance: '50px'
 // });
 
-scrollAddClass(targetElements);
+scrollAddClass(targetElements, 'js-active');
 commonScroll(Html);
 
 // ### Click Event

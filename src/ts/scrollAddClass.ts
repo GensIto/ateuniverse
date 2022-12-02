@@ -1,4 +1,4 @@
-export const scrollAddClass = function (targetElement: NodeListOf<Element>) {
+export const scrollAddClass = function (targetElement: NodeListOf<Element>, className: string) {
   window.addEventListener('scroll', () => {
     //Classを追加する要素を取得
     // const target = document.querySelectorAll('.js-scroll');
@@ -13,7 +13,7 @@ export const scrollAddClass = function (targetElement: NodeListOf<Element>) {
       //要素の上部座標がpositionの位置を通過したら
       if (offsetTop < position) {
         //要素にClassを追加する
-        targetElement[i].classList.add('js-active');
+        targetElement[i].classList.add(className);
       }
     }
   });
