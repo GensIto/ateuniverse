@@ -21,7 +21,7 @@ export const Html = document.querySelector('html');
 export const targetElements = document.querySelectorAll('.js-scroll');
 export const LoadingElement = document.querySelector('.loading');
 export const parentElement = document.querySelector('#fetch-api');
-export const fetchUrl = 'https://jsonplaceholder.typicode.com/users';
+export const fetchUrl = 'https://jsonplaceholder.typicode.com/posts?_limit=9';
 
 // ======================================================================
 //

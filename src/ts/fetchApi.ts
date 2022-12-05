@@ -4,8 +4,8 @@ import axios from 'axios';
 // ? 主にinstagramの取得などに使える関数
 // ? ==========================================================
 
-export const fetchApi = (parentElement: Element | null, url: string) => {
-  axios
+export const fetchApi = async (parentElement: Element | null, url: string) => {
+  await axios
     .get(url)
     .then((res: any) => {
       console.log(res);
@@ -16,9 +16,12 @@ export const fetchApi = (parentElement: Element | null, url: string) => {
 
       for (let i = 0; i < res_data.length; i++) {
         appendElement += `
-          <li>
-            <p>${res_data[i].name}</p>
-          </li>`;
+        <li>
+          <p class="text-sm">${res_data[i].title}</p>
+          <p class="py-4 font-noto text-base leading-8">
+            ${res_data[i].body}
+          </p>
+        </li>`;
       }
       parentElement!.innerHTML = appendElement;
     })
