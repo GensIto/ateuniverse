@@ -1,7 +1,5 @@
 export const scrollAddClass = function (targetElement: NodeListOf<Element>, className: string) {
   window.addEventListener('scroll', () => {
-    //Classを追加する要素を取得
-    // const target = document.querySelectorAll('.js-scroll');
     //Classを追加する位置を指定（ビューポート内）
     const position = Math.floor(window.innerHeight * 0.9); //左記はビューポート内の上から90%の位置を指定
 

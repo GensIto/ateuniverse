@@ -5,13 +5,12 @@ import axios from 'axios';
 // ? ==========================================================
 
 export const fetchApi = async (parentElement: Element | null, url: string) => {
+  if (!parentElement) return;
   await axios
     .get(url)
     .then((res: any) => {
-      console.log(res);
+      // 叩くapiが不明なため一旦any
       const res_data = res.data;
-      console.log('res_data', res_data);
-
       let appendElement = '';
 
       for (let i = 0; i < res_data.length; i++) {
@@ -23,10 +22,10 @@ export const fetchApi = async (parentElement: Element | null, url: string) => {
           </p>
         </li>`;
       }
-      parentElement!.innerHTML = appendElement;
+      parentElement.innerHTML = appendElement;
     })
     .catch((error) => {
-      parentElement!.innerHTML = '<p>エラーが発生しました</p>';
-      console.log(error);
+      parentElement.innerHTML = '<p>エラーが発生しました</p>';
+      new Error(error.message);
     });
 };

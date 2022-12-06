@@ -4,4 +4,6 @@
 yarn prettier
 yarn lint:style:fix
 yarn lint:style
+yarn lint:fix
+yarn lint
 yarn ts-check

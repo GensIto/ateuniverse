@@ -10,7 +10,9 @@
     "ts-check": "tsc -p tsconfig.json",
     "prepare": "husky install",
     "lint:style": "stylelint 'src/**/*.{css,scss,sass}'",
-    "lint:style:fix": "stylelint --fix 'src/**/*.{css,scss,sass}'"
+    "lint:style:fix": "stylelint --fix 'src/**/*.{css,scss,sass}'",
+    "lint": "eslint 'src/**/*.{ts,js,tsx,jsx}'",
+    "lint:fix": "eslint --fix 'src/**/*.{ts,js,tsx,jsx}'"
   },
   "devDependencies": {
     "@babel/polyfill": "^7.12.1",
@@ -18,8 +20,14 @@
     "@types/node": "^18.11.9",
     "@types/scrollreveal": "^0.0.8",
     "@types/swiper": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.45.1",
+    "@typescript-eslint/parser": "^5.45.1",
     "autoprefixer": "^10.4.13",
     "css-declaration-sorter": "^6.3.1",
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
     "husky": "^8.0.2",
     "postcss": "^8.4.19",
     "postcss-sort-media-queries": "^4.3.0",

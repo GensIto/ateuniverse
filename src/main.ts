@@ -44,7 +44,7 @@ fetchApi(parentElement, fetchUrl);
 // });
 
 scrollAddClass(targetElements, 'js-active');
-commonScroll(Html);
+if (Html) commonScroll(Html);
 
 // ### Click Event
 // ----------------------------------------------------------------------
@@ -52,7 +52,6 @@ hamburger(hamburgerBtn, hamburgerMenu, Html);
 
 // ### Other
 // ----------------------------------------------------------------------
-// @ts-ignore
 const swiper = new Swiper('.pickSwiper', {
   slidesPerView: 2,
   spaceBetween: 20,
@@ -74,3 +73,4 @@ const swiper = new Swiper('.pickSwiper', {
     }
   }
 });
+swiper;
