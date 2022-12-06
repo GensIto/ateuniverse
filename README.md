@@ -217,7 +217,6 @@ cache.dbは画像を圧縮したキャッシデータを持っており、次の
 - [can I use?](https://caniuse.com/css-filters/)
 - [ファビコン生成](https://favicon-generator.mintsu-dev.com/)
 - [画像圧縮](https://squoosh.app/)
-- [画像圧縮](https://squoosh.app/)
 - [だみー文章](https://webtools.dounokouno.com/dummytext/)
 - [だみー画像](https://placehold.jp/)
 - [webPについての記事](https://webdesign-trends.net/entry/13745)
@@ -236,6 +235,8 @@ gitなどでコードを管理する時に便利でコードの品質を担保�
 - yarn prettier コード整形
 - yarn lint:style:fix styleを事前に綺麗にする
 - yarn lint:style styleが綺麗か確認する
+- yarn lint:fix javascriptを事前に綺麗にする
+- yarn lint javascriptが綺麗か確認する
 - yarn ts-check tsに危険なものがないかチェックする
 ### メモ
 
