@@ -76,7 +76,6 @@ htmlが冗長になりそうなときは@applyを使いscssに書くことでシ
   - yarn add micromodal --save
   - [ドキュメント](https://micromodal.vercel.app/)
   - [参考記事](https://pengi-n.co.jp/blog/js-micromodal/)
-  - 
 - パララックス (simple parallax js)
   - yarn add simple-parallax-js
   - [ドキュメント](https://simpleparallax.com/)
@@ -186,12 +185,23 @@ src/about.html を作成した例です。
 flocss設計の方がいいんですかね~
 [おすすめ記事](https://qiita.com/super-mana-chan/items/644c6827be954c8db2c0)
 ## 画像圧縮
-
-~~root/vite.config 95 行あたりに書いています~~
-~~viteImagemin の中に記述しています。~~
-~~特に書き換える必要はないかと思います。もう少しすれば画像は webp を使うことを強く勧めます~~
-動かないため削除しました。
-色々調べると圧縮率が悪いそうで
+[プラグイン導入いたしました。](https://www.npmjs.com/package/@macropygia/vite-plugin-imagemin-cache?activeTab=readme)
+```
+yarn build
+```
+で処理が走り、distに圧縮された画像が排出されます。
+cache.dbは画像を圧縮したキャッシデータを持っており、次のbuild時に無駄な処理を省いてくれます。
+消しても全く問題ないです。
+以下の名前はbuildされないので、書き出し直した画像などは自動的に無視されるようになります
+```
+'**/old_*.jpg'
+'**/old_*.png'
+'**/_*.jpg'
+'**/_*.png'
+'**/__*.jpg'
+'**/__*.png'
+```
+### その他
 僕が使っていた[imageoptim](https://imageoptim.com/mac)が優秀なので DL おすすめします
 これからはwebpの使用がいいみたいです[サルワカ道具箱](https://saruwakakun.com/tools/png-jpeg-to-webp/)
 

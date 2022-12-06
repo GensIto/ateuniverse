@@ -1,9 +1,7 @@
 import {defineConfig} from 'vite';
-
 import {resolve} from 'path';
-
-//handlebarsプラグインimport
 import handlebars from 'vite-plugin-handlebars';
+import imageminPlugin from '@macropygia/vite-plugin-imagemin-cache';
 
 // HTMLの複数出力を自動化する
 //./src配下のファイル一式を取得
@@ -113,6 +111,34 @@ export default defineConfig({
       //各ページ情報の読み込み
       context(pagePath) {
         return pageData[pagePath];
+      }
+    }),
+    imageminPlugin({
+      exclude: [
+        // 除外パターン
+        '**/old_*.jpg',
+        '**/old_*.png',
+        '**/_*.jpg',
+        '**/_*.png',
+        '**/__*.jpg',
+        '**/__*.png'
+      ],
+      plugins: {
+        pngquant: {
+          speed: 1,
+          quality: [0.65, 1]
+        },
+        mozjpeg: {
+          quality: 75
+        },
+        svgo: {
+          plugins: [
+            {
+              name: 'removeDimensions',
+              active: true
+            }
+          ]
+        }
       }
     })
   ]
