@@ -2,3 +2,7 @@
 .prettierrc
 vite.config.js
 dist
+tailwind.config.cjs
+postcss.config.cjs
+.stylelintrc.cjs
+.eslintrc.cjs
