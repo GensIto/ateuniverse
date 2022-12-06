@@ -211,6 +211,7 @@ cache.dbは画像を圧縮したキャッシデータを持っており、次の
 
 ## ちなみに....
 - [techfeed](https://techfeed.io/categories/all)
+- [grid layout生成つーる](https://grid.layoutit.com/)
 - [コリス](https://coliss.com/)
 - [zenn](https://zenn.dev/)
 - [wordpress私的マニュアル](https://elearn.jp/wpman/)
@@ -229,6 +230,7 @@ cache.dbは画像を圧縮したキャッシデータを持っており、次の
 - [htpasswd生成](https://www.luft.co.jp/cgi/htpasswd.php)
 - [javascript lesson](https://bigfrontend.dev/ja)
 - [javascript news](https://jser.info/)
+- [cssやjQueryの記事などありました](https://freefrontend.com/)
 
 僕が使っていたものです~
 
