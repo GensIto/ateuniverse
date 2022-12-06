@@ -181,9 +181,8 @@ src/about.html を作成した例です。
 このように追記すれば about.html 独自の seo に変更することができます
 
 ## css(scss)設計
-ここではcomponentと同じ構造にしています。
-flocss設計の方がいいんですかね~
-[おすすめ記事](https://qiita.com/super-mana-chan/items/644c6827be954c8db2c0)
+ここではcomponent/parts,component/toolsと同じ階層にstyle.scssを配置することで変更したいファイル。追加するときの.scssの命名を考える手間を省けるように設計しています
+なのでcomponent/parts/パーツ名、component/tools/ツール名を考えるだけで済むかと思います
 ## 画像圧縮
 [プラグイン導入いたしました。](https://www.npmjs.com/package/@macropygia/vite-plugin-imagemin-cache?activeTab=readme)
 ```
