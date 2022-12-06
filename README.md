@@ -1,7 +1,4 @@
 # vite-web
-このプロジェクトは gulp 脱却を目標とし作成しました。
-使っていたgulpのいいと感じたところは引き継いでいます
-
 ## サイトデザイン
 [作って学ぶコーディング学習サイト](https://code-step.com/)さんの無料カンプのレイアウトを参考に組ませていただきました。
 - [TOP](https://xd.adobe.com/view/f30fe031-d0a3-4e98-a1c1-a309c5add0c6-a65c/grid?hints=off)
