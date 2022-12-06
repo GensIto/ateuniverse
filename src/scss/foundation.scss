@@ -20,6 +20,7 @@ html {
   html {
     /* 1600pxから、100pxごとに1px大きくなる */
     font-size: calc(112.5% + 4 * (100vw - 600px) / 400);
+
     /*  デフォルト font-size: calc(1000vw / 1920); */
   }
 }

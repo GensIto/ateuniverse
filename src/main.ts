@@ -44,7 +44,7 @@ fetchApi(parentElement, fetchUrl);
 // });
 
 scrollAddClass(targetElements, 'js-active');
-if (Html) commonScroll(Html);
+commonScroll(Html);
 
 // ### Click Event
 // ----------------------------------------------------------------------
