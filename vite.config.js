@@ -114,7 +114,6 @@ export default defineConfig({
       }
     }),
     imageminPlugin({
-      cacheDir: 'dist',
       exclude: [
         // 除外パターン
         '**/old_*.jpg',
