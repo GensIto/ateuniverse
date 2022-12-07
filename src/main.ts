@@ -8,7 +8,6 @@ import {fetchApi} from './ts/fetchApi';
 import {scrollByMoveElement} from './ts/scrollByMoveElement';
 import {login} from './ts/login';
 import {countAnimation} from './ts/countAnimation';
-import {pointer} from './ts/pointer';
 // import ScrollReveal from 'scrollreveal';
 import Swiper, {Autoplay} from 'swiper';
 import 'swiper/css';
@@ -62,7 +61,6 @@ hamburger(hamburgerBtn, hamburgerMenu, Html);
 // ### Other
 // ----------------------------------------------------------------------
 countAnimation(countTarget, 10);
-pointer(Html);
 const swiper = new Swiper('.pickSwiper', {
   slidesPerView: 2,
   spaceBetween: 20,
