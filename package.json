@@ -57,7 +57,7 @@
     "Android >= 5",
     "Firefox ESR"
   ],
-  "description": "[作って学ぶコーディング学習サイト](https://code-step.com/)さんの無料カンプのレイアウトを参考に組ませていただきました。 - [TOP](https://xd.adobe.com/view/f30fe031-d0a3-4e98-a1c1-a309c5add0c6-a65c/grid?hints=off) - [ABOUT](https://xd.adobe.com/view/d3d624d6-c12a-4ce8-82fd-e046d7c76dd2-8685/grid?hints=off) - [SINGLE](https://xd.adobe.com/view/8d0c7d5c-194e-4793-842d-449d7581170a-d85f/grid?hints=off) ## 採用技術",
+  "description": "viteで作成したwebテンプレートです。html,scss,tsの基本でweb制作できるので初心者の方はもちろん現役マークアプエンジニアにも使いやすいようにと考え作成しました",
   "main": "vite.config.js",
   "repository": {
     "type": "git",
