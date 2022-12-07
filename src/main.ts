@@ -6,7 +6,7 @@ import {commonScroll} from './ts/commonScroll';
 import {loading} from './ts/loading';
 import {fetchApi} from './ts/fetchApi';
 import {scrollByMoveElement} from './ts/scrollByMoveElement';
-import {login} from './ts/login';
+// import {login} from './ts/login';
 import {countAnimation} from './ts/countAnimation';
 import {autoImgSizing} from './ts/autoImgSizing';
 autoImgSizing();
@@ -27,7 +27,7 @@ const targetElements = document.querySelectorAll<HTMLElement>('.js-scroll');
 const LoadingElement = document.querySelector<HTMLElement>('.loading');
 const parentElement = document.querySelector<HTMLElement>('#fetch-api');
 const moveElement = document.querySelector<HTMLElement>('#js-move-txt');
-const topPage = document.querySelector<HTMLElement>('#top');
+// const topPage = document.querySelector<HTMLElement>('#top');
 const countTarget = document.querySelectorAll<HTMLElement>('.js-count-target');
 const fetchUrl = 'https://jsonplaceholder.typicode.com/posts?_limit=9';
 
@@ -39,7 +39,7 @@ const fetchUrl = 'https://jsonplaceholder.typicode.com/posts?_limit=9';
 
 // ### Load Event
 // ----------------------------------------------------------------------
-if (topPage) login('なんちゃって認証ですセッションストレージを使用しています\n passwordはtestです', 'test');
+// if (topPage) login('なんちゃって認証ですセッションストレージを使用しています\n passwordはtestです', 'test');
 loading(Html, LoadingElement);
 fetchApi(parentElement, fetchUrl);
 

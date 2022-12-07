@@ -9,8 +9,8 @@ export const autoImgSizing = () => {
 
   imgs.forEach((img) => {
     const src = img.getAttribute('src');
-    const w = img.width * 1.3;
-    const h = img.height * 1.3;
+    const w = Math.floor(img.width * 1.3);
+    const h = Math.floor(img.height * 1.3);
     if (!src) return;
 
     if (!img.hasAttribute('width')) {
@@ -18,6 +18,9 @@ export const autoImgSizing = () => {
     }
     if (!img.hasAttribute('height')) {
       img.setAttribute('height', h.toString());
+    }
+    if (!img.hasAttribute('loading')) {
+      img.setAttribute('loading', 'lazy');
     }
   });
 };
