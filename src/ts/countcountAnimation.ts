@@ -4,7 +4,7 @@ export const countAnimation = (countTarget: NodeListOf<HTMLElement> | null, coun
   // ### アニメーション処理
   // ----------------------------------------------------------------------
   countTarget.forEach((node) => {
-    // forEach内では NodeListOf<HTMLElement> が HTMLElementとして型推論されるらしい
+    // forEachとかの中では NodeListOf<HTMLElement> が HTMLElementとして型推論されるらしい
     const targetNum = Number(node.getAttribute('data-num'));
 
     let counterData: NodeJS.Timer | null = null;
