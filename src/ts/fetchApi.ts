@@ -4,7 +4,7 @@ import axios, {AxiosResponse} from 'axios';
 // ? 主にinstagramの取得などに使える関数
 // ? ==========================================================
 
-export const fetchApi = async (parentElement: Element | null, url: string) => {
+export const fetchApi = async (parentElement: HTMLElement | null, url: string) => {
   if (!parentElement) return;
   await axios
     .get(url)

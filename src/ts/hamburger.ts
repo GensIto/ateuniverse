@@ -1,4 +1,4 @@
-export const hamburger = (button: Element | null, menu: Element | null, html: Element | null) => {
+export const hamburger = (button: HTMLElement | null, menu: HTMLElement | null, html: HTMLElement | null) => {
   if (!button || !html || !menu) return;
   button.addEventListener('click', () => {
     html.classList.toggle('gnav-open');

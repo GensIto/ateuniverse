@@ -1,4 +1,4 @@
-export const commonScroll = (html: Element | null) => {
+export const commonScroll = (html: HTMLElement | null) => {
   if (!html) return;
   let set_position = 0;
 

@@ -12,7 +12,6 @@ module.exports = {
   },
   plugins: ['@typescript-eslint'],
   rules: {
-    'no-alert': 'warn',
     'no-console': 'warn',
     'no-unused-vars': 'warn',
     'no-var': 'error',

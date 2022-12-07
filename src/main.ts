@@ -5,6 +5,8 @@ import {scrollAddClass} from './ts/scrollAddClass';
 import {commonScroll} from './ts/commonScroll';
 import {loading} from './ts/loading';
 import {fetchApi} from './ts/fetchApi';
+import {scrollByMoveElement} from './ts/scrollByMoveElement';
+import {login} from './ts/login';
 // import ScrollReveal from 'scrollreveal';
 import Swiper, {Autoplay} from 'swiper';
 import 'swiper/css';
@@ -15,13 +17,15 @@ import 'swiper/css/pagination';
 // ## DOM
 //
 // ======================================================================
-export const hamburgerBtn = document.querySelector('#js-hamburger');
-export const hamburgerMenu = document.querySelector('#js-hamburger-menu');
-export const Html = document.querySelector('html');
-export const targetElements = document.querySelectorAll('.js-scroll');
-export const LoadingElement = document.querySelector('.loading');
-export const parentElement = document.querySelector('#fetch-api');
-export const fetchUrl = 'https://jsonplaceholder.typicode.com/posts?_limit=9';
+const hamburgerBtn = document.querySelector<HTMLElement>('#js-hamburger');
+const hamburgerMenu = document.querySelector<HTMLElement>('#js-hamburger-menu');
+const Html = document.querySelector<HTMLElement>('html');
+const targetElements = document.querySelectorAll<HTMLElement>('.js-scroll');
+const LoadingElement = document.querySelector<HTMLElement>('.loading');
+const parentElement = document.querySelector<HTMLElement>('#fetch-api');
+const moveElement = document.querySelector<HTMLElement>('#js-move-txt');
+const topPage = document.querySelector<HTMLElement>('#top');
+const fetchUrl = 'https://jsonplaceholder.typicode.com/posts?_limit=9';
 
 // ======================================================================
 //
@@ -31,6 +35,7 @@ export const fetchUrl = 'https://jsonplaceholder.typicode.com/posts?_limit=9';
 
 // ### Load Event
 // ----------------------------------------------------------------------
+if (topPage) login('なんちゃって認証ですセッションストレージを使用しています\n passwordはtestです', 'test');
 loading(Html, LoadingElement);
 fetchApi(parentElement, fetchUrl);
 
@@ -45,6 +50,7 @@ fetchApi(parentElement, fetchUrl);
 
 scrollAddClass(targetElements, 'js-active');
 commonScroll(Html);
+scrollByMoveElement(Html, moveElement);
 
 // ### Click Event
 // ----------------------------------------------------------------------

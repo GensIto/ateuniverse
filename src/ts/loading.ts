@@ -1,4 +1,4 @@
-export const loading = (html: Element | null, loading: Element | null) => {
+export const loading = (html: HTMLElement | null, loading: HTMLElement | null) => {
   if (!html || !loading) return;
   window.addEventListener(
     'load',
