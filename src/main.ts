@@ -7,6 +7,7 @@ import {loading} from './ts/loading';
 import {fetchApi} from './ts/fetchApi';
 import {scrollByMoveElement} from './ts/scrollByMoveElement';
 import {login} from './ts/login';
+import {countAnimation} from './ts/countcountAnimation';
 // import ScrollReveal from 'scrollreveal';
 import Swiper, {Autoplay} from 'swiper';
 import 'swiper/css';
@@ -25,6 +26,7 @@ const LoadingElement = document.querySelector<HTMLElement>('.loading');
 const parentElement = document.querySelector<HTMLElement>('#fetch-api');
 const moveElement = document.querySelector<HTMLElement>('#js-move-txt');
 const topPage = document.querySelector<HTMLElement>('#top');
+const countTarget = document.querySelectorAll<HTMLElement>('.js-count-target');
 const fetchUrl = 'https://jsonplaceholder.typicode.com/posts?_limit=9';
 
 // ======================================================================
@@ -58,6 +60,7 @@ hamburger(hamburgerBtn, hamburgerMenu, Html);
 
 // ### Other
 // ----------------------------------------------------------------------
+countAnimation(countTarget, 10);
 const swiper = new Swiper('.pickSwiper', {
   slidesPerView: 2,
   spaceBetween: 20,
