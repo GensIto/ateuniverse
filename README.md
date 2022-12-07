@@ -1,4 +1,13 @@
 # vite-web
+## バージョン管理
+[volta](https://volta.sh/)でバージョン管理しています[導入参考サイト](https://qiita.com/YoshinoriKanno/items/1a41b840a68dea2fb7e7)
+```
+"volta": {
+  "node": "18.12.1",
+  "yarn": "3.3.0"
+}
+```
+それまでnodenvを使用していましたが管理できるバージョンが17.6までだったので変更することを決意しました
 ## サイトデザイン
 [作って学ぶコーディング学習サイト](https://code-step.com/)さんの無料カンプのレイアウトを参考に組ませていただきました。
 - [TOP](https://xd.adobe.com/view/f30fe031-d0a3-4e98-a1c1-a309c5add0c6-a65c/grid?hints=off)

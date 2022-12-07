@@ -17,7 +17,7 @@
   "devDependencies": {
     "@babel/polyfill": "^7.12.1",
     "@macropygia/vite-plugin-imagemin-cache": "^0.1.1",
-    "@types/node": "^18.11.9",
+    "@types/node": "^18.11.11",
     "@types/scrollreveal": "^0.0.8",
     "@types/swiper": "^6.0.0",
     "@typescript-eslint/eslint-plugin": "^5.45.1",
@@ -31,24 +31,24 @@
     "husky": "^8.0.2",
     "postcss": "^8.4.19",
     "postcss-sort-media-queries": "^4.3.0",
-    "prettier": "^2.7.1",
-    "prettier-plugin-tailwindcss": "^0.1.13",
+    "prettier": "^2.8.0",
+    "prettier-plugin-tailwindcss": "^0.2.0",
     "sass": "^1.56.1",
-    "stylelint": "^14.15.0",
+    "stylelint": "^14.16.0",
     "stylelint-config-prettier-scss": "^0.0.1",
     "stylelint-config-recess-order": "^3.0.0",
     "stylelint-config-standard-scss": "^6.1.0",
-    "tailwindcss": "^3.2.1",
-    "typescript": "^4.6.4",
-    "vite": "^3.2.0",
+    "tailwindcss": "^3.2.4",
+    "typescript": "^4.9.3",
+    "vite": "^3.2.5",
     "vite-plugin-handlebars": "^1.6.0"
   },
   "dependencies": {
-    "axios": "^1.2.0",
+    "axios": "^1.2.1",
     "element-closest-polyfill": "^1.0.5",
-    "flowbite": "^1.5.3",
+    "flowbite": "^1.5.4",
     "scrollreveal": "^4.0.9",
-    "swiper": "^8.4.4"
+    "swiper": "^8.4.5"
   },
   "browserslist": [
     "last 3 versions",
@@ -56,5 +56,22 @@
     "iOS >= 9.0",
     "Android >= 5",
     "Firefox ESR"
-  ]
+  ],
+  "description": "[作って学ぶコーディング学習サイト](https://code-step.com/)さんの無料カンプのレイアウトを参考に組ませていただきました。 - [TOP](https://xd.adobe.com/view/f30fe031-d0a3-4e98-a1c1-a309c5add0c6-a65c/grid?hints=off) - [ABOUT](https://xd.adobe.com/view/d3d624d6-c12a-4ce8-82fd-e046d7c76dd2-8685/grid?hints=off) - [SINGLE](https://xd.adobe.com/view/8d0c7d5c-194e-4793-842d-449d7581170a-d85f/grid?hints=off) ## 採用技術",
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GensIto/ateuniverse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GensIto/ateuniverse/issues"
+  },
+  "homepage": "https://github.com/GensIto/ateuniverse#readme",
+  "volta": {
+    "node": "18.12.1",
+    "yarn": "3.3.0"
+  }
 }
