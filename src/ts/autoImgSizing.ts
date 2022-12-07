@@ -19,5 +19,9 @@ export const autoImgSizing = () => {
     if (!img.hasAttribute('height')) {
       img.setAttribute('height', h.toString());
     }
+    // loading='lazy'もつけれます
+    // if (!img.hasAttribute('loading')) {
+    //   img.setAttribute('loading', 'lazy');
+    // }
   });
 };
