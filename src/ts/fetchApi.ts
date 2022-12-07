@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, {AxiosResponse} from 'axios';
 
 // ? ==========================================================
 // ? 主にinstagramの取得などに使える関数
@@ -8,7 +8,7 @@ export const fetchApi = async (parentElement: Element | null, url: string) => {
   if (!parentElement) return;
   await axios
     .get(url)
-    .then((res: any) => {
+    .then((res: AxiosResponse) => {
       // 叩くapiが不明なため一旦any
       const res_data = res.data;
       let appendElement = '';
