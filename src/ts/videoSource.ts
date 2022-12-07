@@ -1,4 +1,4 @@
-export const video = (videoElement: HTMLVideoElement, pcSource: string, spSource: string) => {
+export const videoSource = (videoElement: HTMLVideoElement, pcSource: string, spSource: string) => {
   const videoBreakpoint = () => {
     const w = window.innerWidth;
     const mdW = 768;
