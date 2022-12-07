@@ -19,8 +19,5 @@ export const autoImgSizing = () => {
     if (!img.hasAttribute('height')) {
       img.setAttribute('height', h.toString());
     }
-    if (!img.hasAttribute('loading')) {
-      img.setAttribute('loading', 'lazy');
-    }
   });
 };
