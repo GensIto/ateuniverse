@@ -8,6 +8,8 @@ import {fetchApi} from './ts/fetchApi';
 import {scrollByMoveElement} from './ts/scrollByMoveElement';
 import {login} from './ts/login';
 import {countAnimation} from './ts/countAnimation';
+import {autoImgSizing} from './ts/autoImgSizing';
+autoImgSizing();
 // import ScrollReveal from 'scrollreveal';
 import Swiper, {Autoplay} from 'swiper';
 import 'swiper/css';

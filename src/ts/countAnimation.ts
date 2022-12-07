@@ -30,7 +30,7 @@ export const countAnimation = (countTarget: NodeListOf<HTMLElement> | null, coun
     window.addEventListener('scroll', () => {
       const position = Math.floor(window.innerHeight * 0.9);
       const offsetTop = Math.floor(node.getBoundingClientRect().top);
-      if (offsetTop < position) {
+      if (offsetTop <= position) {
         counterData = setInterval(countUp, countSpeed);
       }
     });
