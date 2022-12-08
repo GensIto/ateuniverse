@@ -8,6 +8,20 @@
 }
 ```
 それまでnodenvを使用していましたが管理できるバージョンが17.6までだったので変更することを決意しました
+## build時
+dist/**.htmlのメタ部分にある
+```
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" crossorigin src="/assets/js/main.js"></script>
+  <link rel="stylesheet" href="/assets/css/style.css">
+```
+を
+```
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <script type="module" crossorigin src="./assets/js/main.js"></script>
+  <link rel="stylesheet" href="./assets/css/style.css">
+```
+のように変更お願いします
 ## サイトデザイン
 [作って学ぶコーディング学習サイト](https://code-step.com/)さんの無料カンプのレイアウトを参考に組ませていただきました。
 - [TOP](https://xd.adobe.com/view/f30fe031-d0a3-4e98-a1c1-a309c5add0c6-a65c/grid?hints=off)
@@ -189,6 +203,208 @@ src/about.html を作成した例です。
 ## css(scss)設計
 ここではcomponent/parts,component/toolsと同じ階層にstyle.scssを配置することで変更したいファイル。追加するときの.scssの命名を考える手間を省けるように設計しています
 なのでcomponent/parts/パーツ名、component/tools/ツール名を考えるだけで済むかと思います
+
+## ts/配下のtypescript関数の説明
+
+- <details><summary>autoImgSizing</summary><div>
+  画像のサイズを明記することはSEOにいいとされています
+  しかし実際webサイトには画像をたくさん使うことが想定され、サイズを書く作業が発生してしまいます
+  めんどくさいことはしない。このコードは自動でレンダリングサイズを決めて指定してくれます
+
+  ```
+    export const autoImgSizing = () => {
+      const imgs = document.querySelectorAll<HTMLImageElement>('img');
+
+      imgs.forEach((img) => {
+        const src = img.getAttribute('src');
+        const w = Math.floor(img.width * 1.3);
+        const h = Math.floor(img.height * 1.3);
+        if (!src) return;
+
+        if (!img.hasAttribute('width')) {
+          img.setAttribute('width', w.toString());
+        }
+        if (!img.hasAttribute('height')) {
+          img.setAttribute('height', h.toString());
+        }
+        // loading='lazy'もつけれます
+        // if (!img.hasAttribute('loading')) {
+        //   img.setAttribute('loading', 'lazy');
+        // }
+      });
+    };
+  ```　
+
+  上記のコードで imgタグにwidthとheightがなければ自動で付与してくれるようにしています
+  コメントアウトでも書いていますがこれに加えてloading='lazy'やaltもつけ忘れていたら自動付与してくれます
+  使い方はmain.tsにimportし関数を走らせるだけです。
+
+  </div></details>
+
+- <details><summary>commonScroll</summary><div>
+
+  スクロールされている方向によってhtmlタグにclassをつける関数
+  上にスクロールされたら.scroll-up,下にスクロールされたら.scroll-downがつきます
+  また一番下までスクロールすると.scroll-endがつきます。
+  関数実行時には
+  ```
+    const Html = document.querySelector<HTMLElement>('html');
+  ```
+  でhtmlタグを取得し、引数として渡してあげてください。
+
+  </div></details>
+
+- <details><summary>countAnimation</summary>
+
+    スクロールされ要素が表示されたらカウントアニメーションが始まる関数。
+    カウントしたいhtmlにdata-numでカウントしたい数字を入れるとその数字までカウントしてくれます。
+    ```
+      <p class="js-count-target" data-num="100">0</p>
+    ```
+    関数を実行する際には、第一引数にDOM、第二引数にカウントするスピードを渡してあげてください
+    ```
+      const countTarget = document.querySelectorAll<HTMLElement>('.js-count-target');
+      countAnimation(countTarget, 10);
+    ```
+
+  </div></details>
+
+- <details><summary>fetchApi</summary><div>
+
+    instagramの投稿を取得表示させる時に使うのを想定している関数。
+    demoとしてhttps://jsonplaceholder.typicode.com/posts?_limit=9を入れていますが、実際にinstagramの投稿を取得するにはアクセストークンを取得する必要がります。
+    実際にこの関数を使用する際は第一引数に投稿情報を表示させたい親要素、第二引数にapi end pointのurlを渡してください
+
+    ```
+      const parentElement = document.querySelector<HTMLElement>('#fetch-api');
+      const fetchUrl = 'https://jsonplaceholder.typicode.com/posts?_limit=9';
+      fetchApi(parentElement, fetchUrl);
+    ```
+
+  </div></details>
+
+- <details><summary>hamburger</summary><div>
+
+    クリックされた要素にクラス名をつけられる関数です。
+    ```
+      export const hamburger = (button: HTMLElement | null, menu: HTMLElement | null, html: HTMLElement | null) => {
+        if (!button || !html || !menu) return;
+        button.addEventListener('click', () => {
+          html.classList.toggle('gnav-open');
+          button.classList.toggle('js-active');
+          menu.classList.toggle('js-active');
+        });
+
+        // ### ページ内リンクでハンバーガーが閉じるように
+        // ----------------------------------------------------------------------
+        const pageLink = document.querySelectorAll('a[href^="#"]');
+        for (let i = 0; i < pageLink.length; i++) {
+          pageLink[i].addEventListener('click', () => {
+            button.classList.remove('js-active');
+            menu.classList.remove('js-active');
+          });
+          window.scrollBy(0, -100);
+        }
+      };
+
+    ```
+    buttonがクリックされたらhtmlにgnav-open、buttonとmenuにjs-activeがつくように設定しています。
+    ページ内リンクのクリック時に閉じるように設定していて画面内に表示されるように**window.scrollBy(0, -100);**で-100pxのところに行くようにしています
+    関数を使用する際は第一引数にボタン要素,第二引数にメニュー要素,第三引数にhtmlを渡してあげてください
+    ```
+      const hamburgerBtn = document.querySelector<HTMLElement>('#js-hamburger');
+      const hamburgerMenu = document.querySelector<HTMLElement>('#js-hamburger-menu');
+      const Html = document.querySelector<HTMLElement>('html');
+      hamburger(hamburgerBtn, hamburgerMenu, Html);
+    ```
+
+  </div></details>
+
+- <details><summary>login</summary><div>
+    なんちゃって認証実装コードです。
+    promptでpopupを表示し指定したpswならそのまま表示、違ったら指定したurlに飛ばすことができます
+    ```
+    export const login = (message: string, password: string,url: string) => {
+      if (!sessionStorage.getItem('user')) {
+        const psw = prompt(message, '');
+        if (psw === password) {
+          sessionStorage.setItem('user', 'login');
+          window.alert('ログイン成功');
+        } else {
+          window.alert('ログイン失敗');
+           location.replace(url);
+        }
+      }
+    };
+    ```　
+    関数を使用する際は第一引数に表示させる文字列,第二引数にパスワードにする文字列,第三引数に認証失敗時に遷移するurlを渡してあげてください
+    ```
+      login('なんちゃって認証ですセッションストレージを使用しています\n passwordはtestです', 'test',"http://localhost:5173/");
+    ```
+
+  </div></details>
+
+- <details><summary>scrollAddClass</summary><div>
+  スクロールし表示されると指定したclass名をつけられる関数です
+  関数を使用する際は第一引数にターゲットにするElement,第二引数に表示された際にaddするクラス名を渡してあげてください
+  ```
+  const targetElements = document.querySelectorAll<HTMLElement>('.js-scroll');
+  scrollAddClass(targetElements, 'js-active');
+  ```
+  </div></details>
+
+- <details><summary>scrollByMoveElement</summary><div>
+  スクロール量によって移動して欲しい時に使う関数。
+    ```
+      export const scrollByMoveElement = (html: HTMLElement | null, targetElement: HTMLElement | null) => {
+        if (!html || !targetElement) return;
+
+        const MoveText = () => {
+          const htmlTop = html.scrollTop;
+          const position = htmlTop / 20;
+          targetElement.style.transform = `translateX(${-position}%)`;
+        };
+
+        window.addEventListener('scroll', () => {
+          MoveText();
+        });
+      };
+    ```　
+    関数を使用する際は第一引数にどこのスクロール量によって移動させる(ここではhtml),第二引数にtargetを渡してあげてください
+    ```
+    const Html = document.querySelector<HTMLElement>('html');
+    const moveElement = document.querySelector<HTMLElement>('#js-move-txt');
+    scrollByMoveElement(Html, moveElement);
+    ```
+
+  </div></details>
+
+- <details><summary>loading</summary><div>
+    htmlがローディングされた後にしてしたものにクラス名をつける関数
+    関数を使用する際は第一引数にhtml,第二引数にtargetを渡してあげてください
+    ```
+    const Html = document.querySelector<HTMLElement>('html');
+    const LoadingElement = document.querySelector<HTMLElement>('.loading');
+    loading(Html, LoadingElement);
+    ```
+
+  </div></details>
+
+- <details><summary>videoSource</summary><div>
+  **loading.ts**と依存しています
+  pcとspの動画を入れ替える時に使える関数
+  レンダリング時に画面のサイズを取得してvideoタグにsourceタグを埋め込んでくれます。
+  そのあとloading処理が終わった後に動画が再生されるようになっています。
+  関数を使用する際は第一引数にtargetにしたいvideoタグ,第二引数にpcの時に表示させたい動画までのパス,第三引数にspの時に表示させたい動画までのパス,を渡してあげてください
+  ```
+  const video = document.querySelector<HTMLElement>('#js-video');
+  const pcSource = "../video/demo-pc.mp4
+  const spSource = "../video/demo-sp.mp4
+  videoSource(video, pcSource, spSource);
+  ```　
+
+  </div></details>
+
 ## 画像圧縮
 [プラグイン導入いたしました。](https://www.npmjs.com/package/@macropygia/vite-plugin-imagemin-cache?activeTab=readme)
 ```

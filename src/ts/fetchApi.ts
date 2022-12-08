@@ -9,7 +9,6 @@ export const fetchApi = async (parentElement: HTMLElement | null, url: string) =
   await axios
     .get(url)
     .then((res: AxiosResponse) => {
-      // 叩くapiが不明なため一旦any
       const res_data = res.data;
       let appendElement = '';
 

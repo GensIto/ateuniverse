@@ -1,8 +1,54 @@
-/*
+/* ### 変換オンラインツール https://anyconv.com/ja/woff2-konbata/
+---------------------------------------------------------------------- */
+/* ****************************************************************************************************
+
+ # Noto sans JP
+
+**************************************************************************************************** */
 @font-face {
-  font-family: 'Noto_Sans_JP';
-  src: url('../../font/NotoSansJP-Medium.otf') format('otf')
-  font-weight: normal;
+  font-family: 'Noto Sans JP';
+  src: url('../font/noto/NotoSansJP-Black.woff2') format('woff1');
+  font-weight: 900;
   font-style: normal;
 }
-*/
+@font-face {
+  font-family: 'Noto Sans JP';
+  src: url('../font/noto/NotoSansJP-Bold.woff2') format('woff1');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Sans JP';
+  src: url('../font/noto/NotoSansJP-Medium.woff2') format('woff1');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Sans JP';
+  src: url('../font/noto/NotoSansJP-Black.woff2') format('woff1');
+  font-weight: 400;
+  font-style: normal;
+}
+/* ****************************************************************************************************
+
+ # Oswald
+
+**************************************************************************************************** */
+@font-face {
+  font-family: 'Oswald';
+  src: url('../font/oswald/Oswald-Bold.woff2') format('woff1');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Oswald';
+  src: url('../font/oswald/Oswald-Medium.woff2') format('woff1');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Oswald';
+  src: url('../font/oswald/Oswald-Regular.woff2') format('woff1');
+  font-weight: 400;
+  font-style: normal;
+}
