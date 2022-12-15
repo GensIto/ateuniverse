@@ -36,6 +36,7 @@ dist/**.htmlのメタ部分にある
 - typescript
 - scrollreveal
 - swiper
+- minze
 
 ## tailwind css
 このプロジェクトでは **1rem = 10px**になるようにcssで制御しています
@@ -89,7 +90,24 @@ htmlが冗長になりそうなときは@applyを使いscssに書くことでシ
   - 切り替え時などにアニメーションをつけて欲しいと言われたら、ユーザー目線では速い方がいいと押し切りましょう！！！！(無理だったら、js,tsで書いてください....)
   - tailwind cssのUIライブラリーweb制作では使うことは少なそうですが一応
   - [ドキュメント](https://flowbite.com/)
+  - [apiリファレンス](https://minze.dev/api/minze-element.html)
   - [こちらはtailwind cssのUIライブラリーをまとめている記事](https://zenn.dev/kkeisuke/scraps/c3d668e6388676)
+
+### minze
+  - react vueのようにhtmlにもcomponentがあったら楽だなと思い導入いたしました
+  - 参考記事などが少なくドキュメントで解決するしか方法がないので難しく感じると思うのですが比較的簡単だと思います
+  - ts/webComponents/button.ts にある程度書いておくので参考になれば嬉しいです。
+  - 正直素直にreact vueを勉強して使った方が記事などが多いのでいいかはあまり自信がないです
+  - 使ってみたメリット
+    - このプロジェクトでの痒いところの分割したhtmlを呼び出す側での変更ができる
+    - 比較的他の案件にでもファイルを流用しやすい
+    - スコープされたcssが書ける
+  - 使ってみたデメリット
+    - ~~tailwind cssが書けない~~ [外部からstyleを当てる](https://minze.dev/guide/components-styling.html#external)方法が書いてある場所を見つけました
+    - 結局これからブラウザのweb-componentsが充実すると思うがそれまではreactなどの方が使いやすさ含めていいと感じた
+    - state(状態)を書くのは難しい
+  - 記述例などはts/webComponents/README.mdに書いています
+  - [ドキュメント](https://minze.dev/)
 
 ### その他おすすめプラグイン
 - モーダル(Micromodal.js)
@@ -122,10 +140,11 @@ src
 |
 |
 |_ ts (関数コンポーネント思考)
+|  |_ webComponent(web-componentを各場所(minze))
 |
 |_ main.ts (ts をまとめるところ)
 |
-|_ scss (大きな枠のstyle layoutやfoundation)
+|_ scss (大きな枠のstyle layoutやfoundation & web-componentsのstyleを書く場所)
 |
 |_ index.html (ページに応じて増やす)
 |

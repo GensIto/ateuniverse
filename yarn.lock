@@ -2875,6 +2875,7 @@ __metadata:
     eslint-plugin-unused-imports: ^2.0.0
     flowbite: ^1.5.4
     husky: ^8.0.2
+    minze: ^1.0.3
     postcss: ^8.4.19
     postcss-sort-media-queries: ^4.3.0
     prettier: ^2.8.0
@@ -4301,6 +4302,13 @@ __metadata:
     minipass: ^3.0.0
     yallist: ^4.0.0
   checksum: f1fdeac0b07cf8f30fcf12f4b586795b97be856edea22b5e9072707be51fc95d41487faec3f265b42973a304fe3a64acd91a44a3826a963e37b37bafde0212c3
+  languageName: node
+  linkType: hard
+
+"minze@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "minze@npm:1.0.3"
+  checksum: 8049a3b13b6f713f14d95d926d5ec4173a4ee7e2579032ae3a90169f032c198752ecf3b44174f81bb84d195d8eb67a0b6984ba8f21943579166164ef33911c05
   languageName: node
   linkType: hard
 

@@ -7,8 +7,10 @@ import {loading} from './ts/loading';
 import {fetchApi} from './ts/fetchApi';
 import {scrollByMoveElement} from './ts/scrollByMoveElement';
 // import {login} from './ts/login';
+// import {btnComponent} from './ts/webComponents/button/button';
 import {countAnimation} from './ts/countAnimation';
 import {autoImgSizing} from './ts/autoImgSizing';
+import './ts/webComponents/index';
 autoImgSizing();
 // import ScrollReveal from 'scrollreveal';
 import Swiper, {Autoplay} from 'swiper';
@@ -63,6 +65,9 @@ hamburger(hamburgerBtn, hamburgerMenu, Html);
 // ### Other
 // ----------------------------------------------------------------------
 countAnimation(countTarget, 10);
+
+// new btnComponent();
+
 const swiper = new Swiper('.pickSwiper', {
   slidesPerView: 2,
   spaceBetween: 20,
