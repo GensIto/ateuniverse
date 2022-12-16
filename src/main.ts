@@ -10,12 +10,12 @@ import {scrollByMoveElement} from './ts/scrollByMoveElement';
 // import {btnComponent} from './ts/webComponents/button/button';
 import {countAnimation} from './ts/countAnimation';
 import {autoImgSizing} from './ts/autoImgSizing';
-import './ts/webComponents/index';
 autoImgSizing();
 // import ScrollReveal from 'scrollreveal';
 import Swiper, {Autoplay} from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import './ts/webComponents/index';
 
 // ======================================================================
 //

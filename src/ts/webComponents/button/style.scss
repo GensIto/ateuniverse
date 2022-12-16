@@ -1,6 +1,19 @@
 ::part(my-btn) {
+  // @apply bg-indigo-400;
+}
+
+::part(my-btn-bg) {
   @apply bg-indigo-400;
 }
+
 ::part(my-btn-txt) {
   @apply font-noto text-lg;
+}
+
+::part(my-btn-icon) {
+  @apply h-8 w-8;
+}
+
+::part(my-btn-flex) {
+  @apply flex items-center gap-6;
 }
